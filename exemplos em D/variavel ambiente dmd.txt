@@ -1,0 +1,7 @@
+C:\D\dmd2\src
+C:\D\dmd2\windows\bin\dmd.exe
+C:\D\dmd2\windows\bin
+
+dgui.lib
+
+-L/SUBSYSTEM:windows:4

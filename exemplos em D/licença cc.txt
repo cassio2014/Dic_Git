@@ -1,0 +1,17 @@
+/**
+ objetivo: .
+ 
+ projeto: 
+ 
+ Este trabalho está licenciado sob uma 
+ Licença Creative Commons 
+ Atribuição-NãoComercial 4.0 Internacional. 
+ Para ver uma cópia desta licença, visite 
+ http://creativecommons.org/licenses/by-nc/4.0/.
+ 
+ Autor : Cassio Butrico 
+ e-mail: cassio_butrico@hotmail.com
+ 
+ versão: 1.0 
+ data  : 6 de agosto de 2014.
+ */

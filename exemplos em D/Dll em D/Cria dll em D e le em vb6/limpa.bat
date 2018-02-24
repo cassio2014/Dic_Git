@@ -1,0 +1,1 @@
+del *.txt *.obj *.lib *.dll *.exe

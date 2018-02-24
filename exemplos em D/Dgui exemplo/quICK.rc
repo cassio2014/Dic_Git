@@ -1,0 +1,2 @@
+#define IDI_quICK 100
+IDI_quICK              ICON                    "quICK.ico"
