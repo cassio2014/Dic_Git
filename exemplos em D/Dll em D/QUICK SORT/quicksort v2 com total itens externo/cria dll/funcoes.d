@@ -7,29 +7,39 @@ void PAUSAR(){
        import std.process;
        wait(spawnShell("pause"));
 }
-
+//=======================
 export
 void CLS(){
    import std.process;
    wait(spawnShell("cls"));
 }
-
+//=======================
 export
 int RAND(int a) {
 	import std.random;
 	auto r = uniform(0,a + 1);
 	return r;
 }
-
+//=======================
 export{
 int TOTAL_ITENS;
 long TOTAL_RECURS;
 long TOTAL_TROCAS;
 }
+
 //=======================
+export
+void ToTALNUMEROS(int TOT_NUM)
+{
+      TOTAL_ITENS = TOT_NUM;
+}
+//=======================
+
 export
 void CLASIFICAR(int *a)
 {
+    TOTAL_RECURS = 0;
+    TOTAL_TROCAS = 0;
 	QS(a, 0 , TOTAL_ITENS - 1);
 }
 //========================

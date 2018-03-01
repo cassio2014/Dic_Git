@@ -1,2 +1,3 @@
 @echo off
-del *.exe  *.obj  *.def  *.lib *.dll *.txt *.res
+del *.exe  *.obj  *.lib *.dll *.txt *.res func.def
+del *.def

@@ -1,3 +1,3 @@
 @echo off
-dmd -d test.d funcoes.res
+dmd -O test.d funcoes.res
 del *.obj

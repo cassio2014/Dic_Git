@@ -4,7 +4,7 @@ import std.stdio;
 import std.datetime;
 pragma(lib, "funcoes");
 
-int maxi = 60000000;
+int maxi = 60_000_000;
 int Ti;
 int Tf;
 int Td;
@@ -41,6 +41,8 @@ void main() {
 	tv = Clock.currTime;
 	Tf=tv.second;
 	Td=Tf - Ti;
+	if (Td < 0) Td = 60+Td;
+	
 	// TOTAL_TROCAS  VARIAVEL NA DLL
 	// TOTAL_RECURS   VARIAVEL NA DLL
 	writeln("\tclasificada em ",Td," segundos.!!!\n");

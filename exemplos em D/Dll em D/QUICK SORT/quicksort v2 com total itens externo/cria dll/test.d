@@ -4,7 +4,7 @@ import std.stdio;
 import std.datetime;
 pragma(lib, "funcoes");
 
-int maxi = 1000000;
+int maxi = 100_00_000;
 int Ti;
 int Tf;
 int Td;
@@ -13,8 +13,9 @@ void main() {
 	int[] tabela;
 	tabela.length = maxi;
 
-	TOTAL_ITENS = maxi; // variavel da dll
-
+	// TOTAL_ITENS = tabela.length; // variavel da dll
+    ToTALNUMEROS(maxi);
+	
 	auto tv = Clock.currTime;
 	CLS; // funsao na dll
 	writeln("\n\tGerando Tabela com ",maxi," posicoes....\n ");
@@ -41,6 +42,7 @@ void main() {
 	tv = Clock.currTime;
 	Tf=tv.second;
 	Td=Tf - Ti;
+	if (Td < 0) Td = 60 + Td;
 	// TOTAL_TROCAS  VARIAVEL NA DLL
 	// TOTAL_RECURS   VARIAVEL NA DLL
 	writeln("\tclasificada em ",Td," segundos.!!!\n");

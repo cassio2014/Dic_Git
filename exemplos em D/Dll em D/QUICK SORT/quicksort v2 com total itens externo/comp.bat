@@ -1,7 +1,11 @@
 @echo off
 rc funcoes.rc
-path=%path%;%bcc32%;c:\tcc
-bcc32 -w- quick.cpp 
-tcc -w quickc.c  resource.o -o quickc.exe
-dmd  -O test.d funcoes.res
+rc bcc.rc
+dmd -O -release test.d funcoes.res
+path=%bcc32%;c:\tcc
+bcc32 -O -w- quickb.cpp 
+call c:\tdm\vai.bat
+windres -O coff tcc.rc -o tcc.o	
+tcc -w  quickc.c  tcc.o
+del *.obj *.o *.tds
 exit

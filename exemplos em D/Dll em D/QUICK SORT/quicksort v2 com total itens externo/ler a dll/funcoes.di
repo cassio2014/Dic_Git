@@ -13,7 +13,10 @@ export{
 int TOTAL_ITENS;
 long TOTAL_RECURS;
 long TOTAL_TROCAS;
-	}
+}
+//=======================
+export
+void ToTALNUMEROS(int TOT_NUM);
 //=======================
 export
 void CLASIFICAR(int *a);

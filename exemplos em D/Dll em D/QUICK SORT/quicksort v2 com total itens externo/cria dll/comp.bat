@@ -1,18 +1,22 @@
 @echo off
 rc funcoes.rc
-dmd -O -offuncoes.dll -L/IMPLIB funcoes.d dll.d 
+rem **********************************************
+rem dmd -O -shared  -offuncoes.dll funcoes.d dll.d 
+rem dmd -O -lib -offuncoes.lib funcoes.d dll.d 
+rem ***********************************************
+dmd -O  -offuncoes.dll -L/IMPLIB  funcoes.d dll.d func.def
 dll2def funcoes.dll  
 "C:\Program Files\Microsoft Visual Studio\VC98\bin\"link /dump /exports funcoes.dll /out:funcoes.txt
-@copy *.dll  ..\
-@copy *.dll ..\"ler a dll"
-@copy *.lib ..\
-@copy *.lib ..\"ler a dll"
-@copy *.txt ..\
-@copy *.def ..\
-@copy *.txt ..\"ler a dll"
-@copy *.def ..\"ler a dll"
-del *.obj
 call test.bat
+@echo off
+copy /y *.dll  ..\
+copy /y *.dll ..\"ler a dll"
+copy /y *.lib ..\
+copy /y *.lib ..\"ler a dll"
+copy /y *.txt ..\
+copy /y *.def ..\
+copy /y *.txt ..\"ler a dll"
+copy /y *.def ..\"ler a dll"
 exit
 
 

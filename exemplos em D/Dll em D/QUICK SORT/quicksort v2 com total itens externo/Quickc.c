@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <windows.h>
 
+
+
 int maxi = 60000000;
 int cont=0;
 
@@ -8,6 +10,7 @@ SYSTEMTIME lt;
 DWORD tgt;
 DWORD tct;
 int tg;
+int dife;
 
 typedef void (WINAPI*Dfunc)();
 Dfunc CLASIFICAR;
@@ -72,8 +75,11 @@ int main(){
 	   a[cont]=rand() %maxi;
 	   /*a[cont]=gera(maxi);*/
 	}
-
-  printf("\n\tMatriz de %d de itens, gerada aleatoriamente: %d ms\n\n ",maxi,GetTickCount()-tgt);
+   
+   dife = GetTickCount()-tgt;
+   if (dife < 0) dife=60 + dife;
+   
+  printf("\n\tMatriz de %d de itens, gerada aleatoriamente: %d ms\n\n ",maxi,dife);
   /*
   for(cont=0;cont<maxi;cont++)
     {
@@ -98,11 +104,15 @@ int main(){
        CLASIFICAR(a);          /*
   ============================
    tg - Tempo Gasto            */
-    GetLocalTime(&lt);
+   GetLocalTime(&lt);
    tg = lt.wSecond;
+   
+   dife = tg-tct;
+   if (dife < 0) dife = 60 + dife;
+
  printf("\t  %d Trocas.\n\r\t  %d Recurs\344es.\n\r ",*TOTAL_TROCAS,*TOTAL_RECURS);
 
-  printf("\tCLASIFICADA en %d segundos.\n\n",tg-tct);
+  printf("\tCLASIFICADA en %d segundos.\n\n",dife);
   printf("\tHora Final:   %2d:%02d:%02d.%02d\n\n",
   lt.wHour,
   lt.wMinute,
