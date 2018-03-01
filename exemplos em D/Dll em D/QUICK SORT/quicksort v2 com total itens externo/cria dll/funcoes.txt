@@ -1,0 +1,33 @@
+
+Dump of file funcoes.dll
+
+File Type: DLL
+
+  Section contains the following exports for funcoes.dll
+
+           0 characteristics
+           0 time date stamp Wed Dec 31 22:00:00 1969
+        0.00 version
+           1 ordinal base
+           7 number of functions
+           7 number of names
+
+    ordinal hint RVA      name
+
+          1    0 000033A4 CLASIFICAR
+          2    1 000032E8 CLS
+          3    2 00003238 PAUSAR
+          4    3 00003394 RAND
+          5    4 0005F010 TOTAL_ITENS
+          6    5 0005F018 TOTAL_RECURS
+          7    6 0005F020 TOTAL_TROCAS
+
+  Summary
+
+       18000 .CRT$XIA
+        1000 .debug
+        1000 .edata
+        1000 .idata
+        7000 .reloc
+        1000 .tls
+       5C000 DPB

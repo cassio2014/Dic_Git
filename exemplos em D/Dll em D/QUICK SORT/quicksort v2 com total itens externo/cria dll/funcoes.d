@@ -21,12 +21,11 @@ int RAND(int a) {
 	return r;
 }
 
-export
+export{
 int TOTAL_ITENS;
-export
 long TOTAL_RECURS;
-export
 long TOTAL_TROCAS;
+}
 //=======================
 export
 void CLASIFICAR(int *a)
