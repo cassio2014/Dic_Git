@@ -6,7 +6,7 @@ import dic.dic;
 pragma(lib,"dic");
 pragma(lib,"funcoes");
 
-int maxi =  600000;
+int maxi =  60000000;
 int Ti;
 int Tf;
 int Td;
@@ -28,6 +28,7 @@ void main() {
 		//write(tabela[contador]," ");
 		contador++;
 	}
+
 	write("}.");
 	tv = Clock.currTime;
 	Ti=tv.second;

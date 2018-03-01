@@ -1,8 +1,8 @@
 @echo off
-dmd -O -release -offuncoes.dll -L/IMPLIB funcoes.d dll.d funcoes.def
+rc funcoes.rc
+dmd -O -offuncoes.dll -L/IMPLIB funcoes.d dll.d 
 criadef funcoes.dll > func.def  
 "C:\Program Files\Microsoft Visual Studio\VC98\bin\"link /dump /exports funcoes.dll /out:funcoes.txt
-
 @copy *.dll  ..\
 @copy *.dll ..\"ler a dll"
 @copy *.lib ..\
@@ -13,6 +13,7 @@ criadef funcoes.dll > func.def
 @copy *.def ..\"ler a dll"
 #pause
 del *.obj
+call test.bat
 exit
 
 

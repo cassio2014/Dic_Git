@@ -4,7 +4,7 @@ import std.stdio;
 import std.datetime;
 pragma(lib, "funcoes");
 
-int maxi = 600000;
+int maxi = 60000000;
 int Ti;
 int Tf;
 int Td;
