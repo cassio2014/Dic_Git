@@ -27,7 +27,7 @@ import dic.dic;
 import core.stdc.locale;
 import std.process;
 
-//pragma(lib,"dic");
+pragma(lib,"dic");
 
 
 void main()
