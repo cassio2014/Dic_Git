@@ -54,7 +54,6 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Option Explicit
 
 Dim x, NUmeros As Long
 Dim Tinicial, Tfinal, Tdife
@@ -63,9 +62,13 @@ Dim Tabela() As Long
 Private Sub Form_Load()
   TXTclasifica.Text = ""
 
-  '***************************
-     NUmeros = 1000000
-  '****************************
+'***************************
+   If CNDNumero > 0 Then
+      NUmeros = CNDNumero
+   Else
+      NUmeros = 10000
+   End If
+'****************************
  FRMgeral.Caption = "Clasifica " & Format(NUmeros, "##,###,###,###")
  ReDim Tabela(NUmeros)
 End Sub

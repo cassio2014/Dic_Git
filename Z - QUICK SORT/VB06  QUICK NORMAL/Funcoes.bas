@@ -3,6 +3,23 @@ Option Explicit
 
 Public Troca As Long
 Public Interasao As Long
+Public CNDNumero As Long
+
+Sub main()
+     If Command = "" Then
+        FRMgeral.Show
+        Exit Sub
+     End If
+    Dim sArgs() As String
+    CNDNumero = 0
+    On Error Resume Next
+    sArgs = Split(Command, "/") ', -1, 1)
+    If IsNumeric(sArgs(1)) Then
+        CNDNumero = Val(sArgs(1))
+    End If
+    FRMgeral.Show
+End Sub
+
 
 Public Sub QuickSort(Matrix() As Long)
     Interasao = 0
