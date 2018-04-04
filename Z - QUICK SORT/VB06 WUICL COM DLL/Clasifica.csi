@@ -1,0 +1,6 @@
+[History]
+1=#P0#=mb	#P1#=CMDgerar_Click	#P2#=Clasifica/FRMgeral/CMDgerar_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20180320052808	#P7#=0	#P8#=0	.
+2=#P0#=mb	#P1#=main	#P2#=Clasifica/Module1/main	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20180320050955	#P7#=0	#P8#=14	.
+3=#P0#=mb	#P1#=Form_Activate	#P2#=Clasifica/FRMgeral/Form_Activate	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20180320050257	#P7#=0	#P8#=2	.
+4=#P0#=mb	#P1#=Form_Load	#P2#=Clasifica/FRMgeral/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20180320045652	#P7#=0	#P8#=6	.
+5=#P0#=mb	#P1#=CMDsair_Click	#P2#=Clasifica/FRMgeral/CMDsair_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20180320045522	#P7#=-2147483640	#P8#=1	.
