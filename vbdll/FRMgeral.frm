@@ -106,7 +106,7 @@ Private Sub Form_Load()
      If CMDNumero > 0 Then
         NUmeros = CMDNumero
      Else
-        NUmeros = 1000000
+        NUmeros = 100000
      End If
   '*************************
  ReDim Tabela(NUmeros)
