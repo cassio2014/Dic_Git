@@ -1,5 +1,7 @@
 import std.stdio;
-import std.conv;extern(C) int kbhit();
+import std.conv;
+
+extern(C) int kbhit();
 
 int main(string[] args)
 {
@@ -86,8 +88,10 @@ int main(string[] args)
     ];
     
     foreach(i,indx;p)
-    {        if(i % 4 == 0|| i<=15) {writeln();}
-        writef("%3s = %-3s\t ",i,indx);
+    {
+		if(indx == "")continue;
+        if(i % 4 == 0|| i<=15) {writeln();}
+        writef("%3s = %s\t ",i,indx);
     } 
     writeln("\n\n");
     writeln("\\1 = \1 - carinha");
@@ -97,6 +101,7 @@ int main(string[] args)
     writeln("\\5 = \5 - paus");
     writeln("\\6 = \6 - espadas");
     
-    writeln();    while(!kbhit()){stdout.flush();}
+    writeln();
+    while(!kbhit()){stdout.flush();}
     return 0;
 }

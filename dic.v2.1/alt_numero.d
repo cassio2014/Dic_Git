@@ -1,6 +1,7 @@
 import std.stdio;
 import std.conv;
-extern (C) int kbhit();
+
+extern (C) int kbhit();
 
 void main()
 {
