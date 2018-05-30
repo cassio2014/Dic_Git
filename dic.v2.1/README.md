@@ -61,9 +61,8 @@ copie a pasta dic para a pasta import.
 	   
 	   
 * Na pasta resource tem um arquivo 
-* zip, bin.zip nele tem 1 binario que 
+* zip, Resources.zip nele tem programas binarios e dll que 
 * deverã ser colocada na pasta bin do D.
-* o binario é rcc.exe 
 
 	   
 # use em seus programas:  

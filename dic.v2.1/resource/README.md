@@ -15,8 +15,9 @@
 
  versão: 2.1
 
- Data: 8 de Fevereiro de 2017.
- DMD V: 2.73 - WINDOWS.
+ Data: 30 de Maio de 2018.
+ 
+ DMD v2.079.0 - WINDOWS.
 
 ### Para que é este projeto? ###
 
@@ -60,9 +61,8 @@ copie a pasta dic para a pasta import.
 	   
 	   
 * Na pasta resource tem um arquivo 
-* zip, bin.zip nele tem 1 binario que 
+* zip, Resources.zip nele tem programas binarios e dll que 
 * deverã ser colocada na pasta bin do D.
-* o binario é rcc.exe 
 
 	   
 # use em seus programas:  
