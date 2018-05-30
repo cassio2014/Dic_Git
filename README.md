@@ -15,8 +15,9 @@
 
  versão: 2.1
 
- Data: 31 de Maio de 2017.
- DMD V: 2.73 - WINDOWS.
+ Data: 30 de Maio de 2018.
+ 
+ DMD v2.079.0 - WINDOWS.
 
 ### Para que é este projeto? ###
 
