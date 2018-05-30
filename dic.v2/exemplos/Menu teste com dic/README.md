@@ -13,16 +13,17 @@
 
  email: cassio_butrico@hotmail.com
 
- versão: 2.0
+ versão: 2.1
 
- Data: 6 de agosto de 2014.
-
+ Data: 30 de Maio de 2018.
+ 
+ DMD v2.079.0 - WINDOWS.
 
 ### Para que é este projeto? ###
 
 * DIC dicionario de letras tradutor.
 * Totalmente escrito em linguagem D.
-* versão: 2.0
+* versão: 2.1
 
 ### Como eu configuro? ###
 
@@ -71,14 +72,12 @@ copie a pasta dic para a pasta import.
 
 ### para mostrar strings com acentos use dwrite ou dwriteln.
 ### para converter uma string use dicconv.	 
-### para formatar a saida use dwritef ou dwritefln.  
 
 ### Como uso? ###
 
 * dwrite
 * dwriteln
 * dicconv
-* dwritef ou dwritefln
 
 # dwrite:
       dwrite("Você pode colocar acentos, e tb simbolos graficos ▒░░ :)";
@@ -92,17 +91,6 @@ converte uma string criada, para ser usada com write ou writeln normalmente
       string nome = dicconv("Cássio");
       writeln(nome);
 	  
-# dwritef:
-posibilita uma saida formatada.
-
-# exemplo:
-      float numero = 15.16234;
-	  dwritef("valor = %2.2f ",numero);
-	  
-# Saida: valor = 15.16
-      
-# dwritefln a mesma coisa, so que pula uma linha.
-
 
 # observe:
     dwriteln("\nuse \"acentuação\"  ¥ gráficos -> ░▒░ juntos ♣ com palavras.\n");
