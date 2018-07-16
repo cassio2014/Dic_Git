@@ -2,18 +2,18 @@ VERSION 5.00
 Begin VB.Form Form1 
    BackColor       =   &H00800000&
    Caption         =   "Form1"
-   ClientHeight    =   3060
-   ClientLeft      =   11730
-   ClientTop       =   6570
-   ClientWidth     =   4335
+   ClientHeight    =   3066
+   ClientLeft      =   11732
+   ClientTop       =   6566
+   ClientWidth     =   4340
    FillColor       =   &H00C0FFFF&
    FillStyle       =   0  'Solid
    ForeColor       =   &H80000000&
    Icon            =   "Test.frx":0000
    LinkTopic       =   "Form1"
    PaletteMode     =   1  'UseZOrder
-   ScaleHeight     =   3060
-   ScaleWidth      =   4335
+   ScaleHeight     =   3066
+   ScaleWidth      =   4340
    StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton Command2 
       Caption         =   "Sair"
@@ -52,6 +52,9 @@ Sub Mult Lib "Cmult.dll" Alias "Multiplica" _
 (a As Single, b As Single, C As Single, ByVal n As Long)
 
 Private Sub Command1_Click()
+On Error Resume Next
+
+
 Dim a(10) As Single, b(10) As Single, C(10) As Single, n As Integer
 For n = 1 To 10
   a(n) = n * 1.1

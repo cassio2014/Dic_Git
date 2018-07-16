@@ -1,10 +1,12 @@
-import funcoes;
+module test;
 
+import funcoes;
 import std.stdio;
 import std.datetime;
+
 pragma(lib, "funcoes");
 
-int maxi = 10_000_000;
+int maxi = 1_000_000;
 int Ti;
 int Tf;
 int Td;
@@ -15,9 +17,9 @@ void main()
 	tabela.length = maxi;
 
    ToTALNUMEROS(maxi);
-	
+ 	
 	auto tv = Clock.currTime;
-	CLS; // funsao na dll
+	CLS; //FUNÇÃO cls na dll
 	writeln("\n\tGerando Tabela com ",maxi," posicoes....\n ");
 	write("\tTabela = { ");
 
@@ -28,7 +30,6 @@ void main()
 		//write(tabela[contador]," ");
 		contador++;
 	}
-
 	write("}.");
 	tv = Clock.currTime;
 	Ti=tv.second;
@@ -38,7 +39,7 @@ void main()
 	      tv.second);
 
 	writeln("\n\n\tclasificando....");
-	//=======FUNSAO NA DLL =========
+	//=======FUNÇÃO NA DLL =========
 		 CLASIFICAR(tabela.ptr);
 	//==============================
 	tv = Clock.currTime;
@@ -47,21 +48,25 @@ void main()
 	if (Td < 0) Td = 60 + Td;
 	// TOTALTROCAS  Rotinas NA DLL
 	// TOTALRECURS  Rotinas NA DLL
+	long trocas = 0;
+    trocas = TOTALTROCAS;
+	long recursao = 0;
+	recursao = TOTALRECURS;
 	writeln("\tclasificada em ",Td," segundos.!!!\n");
-	writeln("\t",TOTALTROCAS," Trocas efetuadas.");
-	writeln("\t",TOTALRECURS," Chamada de recursao efetuadas.");
+	writeln("\t",trocas," Trocas efetuadas.");
+	writeln("\t",recursao," Chamada de recursao efetuadas.");
 	write("\n\tHorario final  : ",
 	      tv.hour,":",
 	      tv.minute,":",
 	      tv.second,"\n\n");
 
 	write("\tTabela = { ");
-	contador=0;
-    while(contador < tabela.length)
-    {
-//write(tabela[contador]," ");
-		contador++;
-	}
+	//contador=0;
+  //  while(contador < tabela.length)
+  //  {
+     // write(tabela[contador]," ");
+//	    contador++;
+//	}
 	write("}.");
 	writeln("\n");
 	PAUSAR;

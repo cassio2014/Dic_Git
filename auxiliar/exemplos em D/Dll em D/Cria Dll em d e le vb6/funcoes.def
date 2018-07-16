@@ -1,7 +1,0 @@
-LIBRARY        "funcoes.dll"
-EXETYPE         NT
-SUBSYSTEM       WINDOWS
-EXETYPE	        NT
-CODE            SHARED EXECUTE
-DATA            WRITE
-

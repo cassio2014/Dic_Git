@@ -1,9 +1,10 @@
 Type=Exe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\Windows\System32\stdole2.tlb#OLE Automation
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\..\..\Windows\System32\stdole2.tlb#OLE Automation
 Form=FRMgeral.frm
+Module=Module1; Module1.bas
 ResFile32="manifest.RES"
 IconForm="FRMgeral"
-Startup="FRMgeral"
+Startup="Sub Main"
 HelpFile=""
 Title="Clasifica"
 ExeName32="Clasifica.exe"
@@ -13,13 +14,13 @@ HelpContextID="0"
 CompatibleMode="0"
 MajorVer=1
 MinorVer=3
-RevisionVer=60
+RevisionVer=96
 AutoIncrementVer=1
 ServerSupportFiles=0
-VersionCompanyName="Cassio (c) 2018"
+VersionCompanyName="Cassio (C) 2018"
 CompilationType=0
 OptimizationType=0
-FavorPentiumPro(tm)=-1
+FavorPentiumPro(tm)=0
 CodeViewDebugInfo=0
 NoAliasing=0
 BoundsCheck=0
@@ -34,5 +35,5 @@ ThreadPerObject=0
 MaxNumberOfThreads=1
 DebugStartupOption=0
 
-[RVB]
-DeleteClass1=Funcoes
+[CodeSMART]
+Task_UID=20_03_18_05_02_27

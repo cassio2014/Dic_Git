@@ -1,0 +1,3 @@
+LIBRARY imprimir
+EXPORTS
+  imprima

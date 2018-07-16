@@ -4,6 +4,7 @@ criadef dici.dll
 move /y dici.dll ../
 move /y dici.lib ../
 move /y dici.def ../
+del *.obj
 cd ..
 
 

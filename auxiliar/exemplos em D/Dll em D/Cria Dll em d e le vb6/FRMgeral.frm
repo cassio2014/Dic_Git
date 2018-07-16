@@ -16,7 +16,7 @@ Begin VB.Form FRMgeral
    Begin VB.CommandButton CMDsair 
       Caption         =   "&Sair"
       BeginProperty Font 
-         Name            =   "Roboto Bk"
+         Name            =   "Arial"
          Size            =   18
          Charset         =   0
          Weight          =   400
@@ -28,13 +28,13 @@ Begin VB.Form FRMgeral
       Left            =   30
       TabIndex        =   1
       Top             =   2880
-      Width           =   1845
+      Width           =   1995
    End
    Begin VB.CommandButton CMDgerar 
       Caption         =   "&Clasificar"
       Default         =   -1  'True
       BeginProperty Font 
-         Name            =   "Roboto"
+         Name            =   "Arial"
          Size            =   20.25
          Charset         =   0
          Weight          =   700
@@ -47,11 +47,11 @@ Begin VB.Form FRMgeral
       TabIndex        =   0
       TabStop         =   0   'False
       Top             =   405
-      Width           =   1845
+      Width           =   1965
    End
    Begin VB.TextBox TXTclasifica 
       BeginProperty Font 
-         Name            =   "Arimo"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
          Weight          =   700
@@ -76,18 +76,19 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Declare Sub QuickSort Lib _
-  "funcoes.dll" Alias _
+  "funcoes" Alias _
   "CLASIFICAR" (Tabel As Long)
 
 Private Declare Sub Quantos_itens Lib _
-  "funcoes.dll" Alias "ToTALNUMEROS" (TdeNumros As Long)
+  "funcoes" Alias "ToTALNUMEROS" _
+  (TdeNumros As Long)
 
 
 Private Declare Function Total_Interac Lib _
-  "funcoes.dll" Alias "TOTALRECURS" () As Long
+  "funcoes" Alias "TOTALRECURS" () As Long
 
 Private Declare Function Total_Trocas Lib _
-  "funcoes.dll" Alias "TOTALTROCAS" () As Long
+  "funcoes" Alias "TOTALTROCAS" () As Long
 
 Dim x, NUmeros As Long
 Dim Ver_interasao As Long
@@ -95,45 +96,31 @@ Dim Ver_trocas As Long
 Dim Tinicial, Tfinal, Tdife
 Dim Tabela() As Long
 
-Private Sub Form_Activate()
-  CMDgerar.SetFocus
-End Sub
-
-Private Sub Form_Load()
-  TXTclasifica.Text = ""
-  '*************************
-     NUmeros = 1000000
-  '*************************
- FRMgeral.Caption = "Clasifica " & Format(NUmeros, "##,###,###,###")
- ReDim Tabela(NUmeros)
- FRMgeral.Caption = "Clasifica " & Format(NUmeros, "##,###,###,###")
- On Error Resume Next
- Call Quantos_itens(NUmeros)
-
-End Sub
-
 Private Sub CMDgerar_Click()
-     TXTclasifica.Text = " "
+    TXTclasifica.Text = " "
+    Tinicial = Time
+    Randomize
+    TXTclasifica.Text = "Gerando " & Format(NUmeros, "##,###,###,###") & " Numeros..." & vbNewLine
     CMDgerar.Enabled = False
-
-     Tinicial = Time
-     Randomize
-     TXTclasifica.Text = "Gerando " & Format(NUmeros, "##,###,###,###") & " Numeros..." & vbNewLine
-    
+    DoEvents
   For x = 0 To UBound(Tabela)
-      DoEvents
+       On Error Resume Next
       Tabela(x) = Int(Rnd * NUmeros + 1)
    Next x
      
      Tfinal = Time
      Tdife = Tfinal - Tinicial
 
-    TXTclasifica.Text = TXTclasifica.Text & "Numeros Gerados em " _
-     & Format(Tdife, " h:m:s") & " seg." & vbNewLine & vbNewLine
-'**********************************************************************
+    TXTclasifica.Text = TXTclasifica.Text & _
+      "Numeros Gerados em " & _
+      Format(Tdife, " h:m:s") & " seg." & _
+      vbNewLine & vbNewLine
+'******************************************************
     Tinicial = Time
-    TXTclasifica.Text = TXTclasifica.Text & "Clasifica a Tabela..." & vbNewLine & _
-    " Hora inicial   : " & Format(Tinicial, "h:mm:ss") & vbNewLine
+    TXTclasifica.Text = TXTclasifica.Text & _
+      "Clasifica a Tabela..." & vbNewLine & _
+      " Hora inicial   : " & Format(Tinicial, "h:mm:ss") _
+      & vbNewLine
     
  On Error Resume Next
 '*****************************
@@ -149,8 +136,8 @@ Private Sub CMDgerar_Click()
          " Hora final      : " & Format(Tfinal, "h:mm:ss") & vbNewLine & _
          "Clasificada em  " & _
          Format(Tdife, "h:mm:ss") & " Seg. " & vbNewLine & vbNewLine & _
-          "Interação = " & Format(Ver_interasao, "#,###,###,###,###") & vbNewLine & _
-            "Trocas     = " & Format(Ver_trocas, "#,###,###,###,###") & vbNewLine & vbNewLine
+          "interações = " & Format(Ver_interasao, "#,###,###,###,###") & vbNewLine & _
+            "Trocas        = " & Format(Ver_trocas, "#,###,###,###,###") & vbNewLine & vbNewLine
     
    CMDgerar.Enabled = True
    CMDgerar.SetFocus
@@ -159,4 +146,25 @@ End Sub
 Private Sub CMDsair_Click()
     End
 End Sub
+
+Private Sub Form_Activate()
+  CMDgerar.SetFocus
+End Sub
+
+Private Sub Form_Load()
+  TXTclasifica.Text = ""
+  '*************************
+     If CMDNumero > 0 Then
+        NUmeros = CMDNumero
+     Else
+        NUmeros = 1000000
+     End If
+  '*************************
+ ReDim Tabela(NUmeros)
+ FRMgeral.Caption = "Clasifica " & _
+   Format(NUmeros, "##,###,###,###")
+ On Error Resume Next
+ Call Quantos_itens(NUmeros)
+End Sub
+
 

@@ -1,0 +1,4 @@
+LIBRARY   "imprimir.dll"
+
+EXPORTS
+	imprima

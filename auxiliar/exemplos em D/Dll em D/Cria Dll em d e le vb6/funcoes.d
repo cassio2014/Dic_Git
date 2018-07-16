@@ -2,6 +2,10 @@ module funcoes;
 
 extern (C){
 //=============================================
+int  TOTAL_ITENS = 0;
+long TOTAL_RECURS = 0;
+long TOTAL_TROCAS = 0;
+//=============================================
 export
 void PAUSAR(){
        import std.process;
@@ -21,12 +25,6 @@ int RAND(int a) {
 	return r;
 }
 //=============================================
-export{
-int  TOTAL_ITENS;
-long TOTAL_RECURS;
-long TOTAL_TROCAS;
-}
-//=============================================
 export
 void ToTALNUMEROS(ref int TOT_NUM)
 {
@@ -36,18 +34,24 @@ void ToTALNUMEROS(ref int TOT_NUM)
 export
 long TOTALRECURS()
 {
-   return TOTAL_RECURS;
+	long aux = 0;
+	aux = TOTAL_RECURS;
+    return aux;
 }
 //=============================================
 export
 long TOTALTROCAS()
 {
-   return TOTAL_TROCAS;
+    long aux = 0;
+	aux = TOTAL_TROCAS;
+    return aux;
 }
 //=============================================
 export
 void CLASIFICAR(int *a)
 {
+	TOTAL_RECURS = 0;
+	TOTAL_TROCAS = 0;
 	QS(a, 0 ,TOTAL_ITENS - 1);
 }
 //==============================================
