@@ -46,7 +46,7 @@ int main(string[] args)
 		dicionario("queijo","tipo branco mineiro."),
 		dicionario("cassio","o meu criador claro."),
 		dicionario("pao","com mortandela.")
-	];;
+	];
 
 	int numeroDePalavras = Portugues.length;
 
