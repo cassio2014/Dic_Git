@@ -9,6 +9,7 @@
         <Filename Value="lerdll.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
+        <TopLine Value="6"/>
         <CursorPos X="6" Y="13"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
