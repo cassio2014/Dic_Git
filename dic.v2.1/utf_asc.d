@@ -108,7 +108,7 @@ int main(string[] args)
 	foreach(i,indx;p)
 	{
 	    if(indx == "")continue;
-	    if(contador % 4 == 0)write("\n  ");
+	    if(contador % 3 == 0)write("\n  ");
 		int gg = cast(int)letra[contador];
        // write(i," = ",indx," = ",gg,"    ");
         writef("%3d = %s = %4d   ",i,indx,gg);

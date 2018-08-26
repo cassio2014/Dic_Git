@@ -1,14 +1,14 @@
 import std.stdio;
 import std.conv;
 
-extern(C) int kbhit();
+extern (C) int kbhit();
 
 int main(string[] args)
 {
     string[] p = [
         "\0","\1","\2","\3","\4",
         "\5","\6","","","",
-        "",""," "," \13","\14",
+        "","","","\13","\14",
         "\15","\16","\17","","",
         "\20","\21","\22","\23","\24",
         "\25","\26","\27","","",
@@ -89,9 +89,9 @@ int main(string[] args)
     
     foreach(i,indx;p)
     {
+	    if(i % 4 == 0)writeln();
 		if(indx == "")continue;
-        if(i % 4 == 0|| i<=15) {writeln();}
-        writef("%3s = %s\t ",i,indx);
+		writef("%4s = %s ",i,indx);
     } 
     writeln("\n\n");
     writeln("\\1 = \1 - carinha");
