@@ -481,7 +481,7 @@ VOLTAR:
 		// não aceita espaços em branco, pois ja foram contados.
 		if(Letra == ' ')continue;
 		// a tecla <esc> e a saida ou desistencia. obs Porta dos fundos
-		if(Letra == 27){Enforcou = true;Sair=true;continue; }
+		if(Letra == 27){Enforcou = true;Sair=true;Letra = ' ';continue; }
 		/** aqui trasformo as letras em Maiusculas.*/
 		if(Letra >= 'a' && Letra <= 'z') Letra -= 32;
 		/** Se não tem no alfabeto ignore a letra*/
@@ -579,11 +579,12 @@ VOLTAR:
 	cursor.bVisible = true;
 	SetConsoleCursorInfo(hout, &cursor);
 	dwrite("Novo Jogo <S/N>? :");
-	Letra=Tecla;
+	auto m = readln.chomp;
+	//Letra=Tecla;
 	cursor.bVisible = false;
 	SetConsoleCursorInfo(hout, &cursor);
-	if(Letra == 's' || Letra == 'S'){Letra=' '; goto VOLTAR;}
-	if(Letra == 13){Letra=' '; goto VOLTAR;}
+	if(m == "s" || m == "S"){Letra=' '; goto VOLTAR;}
+
 	
 	/** Restaura os atributos de tersto da console. */
 	SetConsoleTextAttribute(hout, wOldColorAttrs);
