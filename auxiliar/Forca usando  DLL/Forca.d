@@ -73,8 +73,8 @@ auto cursor = CONSOLE_CURSOR_INFO(30,false);
 
 enum 
 {
-   /** Intencidade  */  intencidade,
-   /**Preta     = 0 */  Preta    = 0,
+    /** Intencidade  */  intencidade,
+    /**Preta     = 0 */  Preta    = 0,
 	/** Vermelha = 1 */  Vermelha = 1,
 	/** Verde    = 2 */  Verde    = 2,
 	/** Amarela  = 3 */  Amarela  = 3,
