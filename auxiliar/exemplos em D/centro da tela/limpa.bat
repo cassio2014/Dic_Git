@@ -1,4 +1,5 @@
 @echo off
-del *.exe
+del janela.exe
 del *.obj
+del *.res
 
