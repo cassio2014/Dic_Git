@@ -15,7 +15,7 @@
 
  versão: 2.1
 
- Data: 30 de Maio de 2018.
+ Data: 28 de Janeiro de 2020.
  
  DMD v2.079.0 - WINDOWS.
 
