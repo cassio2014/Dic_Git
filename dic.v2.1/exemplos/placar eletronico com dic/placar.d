@@ -19,6 +19,9 @@
 
  Data: 6 de agosto de 2014.
 
+ Data da ultima atualização. 
+ * 
+  Dia 15 de Julho de 2019.
  */
 
 module placar;
@@ -30,7 +33,7 @@ import dic.dic;
 
 pragma(lib,"dic");
 
-extern(C) int kbhit();
+extern(C) int kbhit(); // @suppress(dscanner.style.undocumented_declaration)
 
 /** string rolar movimenta caracter por caracter pela trela **/
 string rolar(string args)
@@ -49,7 +52,7 @@ int main(string[] args)
 {
     string placar = dicconv(
         "░░░░░░░░░░░░" ~
-            " placar eletrônico " ~
+            " placar eletrônico Por Cassio ... " ~
             "░░░░░░░░░░░░");
     writeln("\n\n\n\n\n\n");
     while(!kbhit)

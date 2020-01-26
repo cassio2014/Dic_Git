@@ -16,5 +16,5 @@
  email: cassio_butrico@hotmail.com
  
  versão: 2.1 
- Data..: 8 de fevereiro de 2017.
+ Data..: 10 de Janeiro de 2019.
  

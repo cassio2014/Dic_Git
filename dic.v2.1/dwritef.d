@@ -27,8 +27,7 @@ import dic.dic;
 import core.stdc.locale;
 import std.process;
 
-pragma(lib,"dic");
-
+//pragma(lib,"dic");
 
 void main()
 {
@@ -50,4 +49,4 @@ void main()
 	dwritefln(" ║ %1$d ║ %1$x ║ %1$o ║ %1$b ║\n",valor3);
 	wait(spawnShell("pause"));
 
-} 
+}

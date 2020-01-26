@@ -51,13 +51,16 @@ void dwritefln(string, A...)(in string fmt, A args)
 }
 */
 int main(){
-	setlocale(LC_NUMERIC, "");
+	// setlocale(LC_NUMERIC, "");
+	setlocale(LC_ALL, "");
+
 	int value = 120;
 	writeln("\n");
 	dwritefln("Valor      :║%d",value);
 	dwritefln("Hexadecimal:║%x", value);
 	dwritefln("Octal      :║%o", value);
 	dwritefln("Binario    :║%b\n\n",value);
+
 	
  dwritefln("R$%6.2f", 26.55);
  dwritefln("R$%6.02f", 6.7);
