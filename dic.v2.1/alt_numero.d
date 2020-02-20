@@ -10,7 +10,7 @@ void main()
 	{
 		if(contador % 3 == 0 || contador <= 14) writeln();
 		c = to!char(contador);
-		writef("alt + %3d = %-3c     ",contador,c);
+		writef("alt + %d = %c     ",contador,c);
 	}
       while(!kbhit){stdout.flush();}
 }
