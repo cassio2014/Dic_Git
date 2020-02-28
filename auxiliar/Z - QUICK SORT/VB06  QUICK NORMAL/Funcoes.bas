@@ -13,9 +13,9 @@ Sub main()
     Dim sArgs() As String
     CNDNumero = 0
     On Error Resume Next
-    sArgs = Split(Command, "/") ', -1, 1)
-    If IsNumeric(sArgs(1)) Then
-        CNDNumero = Val(sArgs(1))
+    sArgs = Split(Command, 1, 1)
+    If IsNumeric(sArgs(0)) Then
+        CNDNumero = Val(sArgs(0))
     End If
     FRMgeral.Show
 End Sub
@@ -39,14 +39,12 @@ Private Sub Quick_Sort(LB As Variant, UB As Variant, Feld() As Long)
 
     Ref = Feld(Fix((P1 + P2) / 2))
     
-    Do
-        Do While (Feld(P1) < Ref)
-            P1 = P1 + 1
-        Loop
- 
-        Do While (Feld(P2) > Ref)
-            P2 = P2 - 1
-        Loop
+    Do   ' 1º  Do Until
+    '===================================
+        Do While (Feld(P1) < Ref): P1 = P1 + 1: Loop
+     '==================================
+        Do While (Feld(P2) > Ref): P2 = P2 - 1: Loop
+    '===================================
 
         If P1 <= P2 Then
             TEMP = Feld(P1)
@@ -56,17 +54,17 @@ Private Sub Quick_Sort(LB As Variant, UB As Variant, Feld() As Long)
             P1 = P1 + 1
             P2 = P2 - 1
         End If
-    Loop Until (P1 > P2)
+    Loop Until (P1 > P2) ' Fecha  1º Do Until
      
      If LB < P2 Then
-        Interasao = Interasao + 1
-        Call Quick_Sort(LB, P2, Feld)
-    End If
-    
-    If P1 < UB Then
-        Interasao = Interasao + 1
-        Call Quick_Sort(P1, UB, Feld)
-    End If
+          Interasao = Interasao + 1
+          Call Quick_Sort(LB, P2, Feld)
+     End If
+     
+     If P1 < UB Then
+            Interasao = Interasao + 1
+            Call Quick_Sort(P1, UB, Feld)
+     End If
     
 End Sub
 

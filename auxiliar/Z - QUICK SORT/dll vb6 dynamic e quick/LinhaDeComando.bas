@@ -9,9 +9,9 @@ Sub main()
     Dim sArgs() As String
     CNDNumero = 0
     On Error Resume Next
-    sArgs = Split(Command, "/") ', -1, 1)
-    If IsNumeric(sArgs(1)) Then
-        CMDNumero = Val(sArgs(1))
+    sArgs = Split(Command, 1, 1)
+    If IsNumeric(sArgs(0)) Then
+        CMDNumero = Val(sArgs(0))
         Debug.Print CMDNumero
     End If
     FRMgeral.Show

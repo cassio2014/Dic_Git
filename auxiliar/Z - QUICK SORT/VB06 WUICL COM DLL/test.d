@@ -11,13 +11,13 @@ int Ti;
 int Tf;
 int Td;
 
-void main() 
+void main()
 {
 	int[] tabela;
 	tabela.length = maxi;
 
    ToTALNUMEROS(maxi);
- 	
+
 	auto tv = Clock.currTime;
 	CLS; //FUNÇÃO cls na dll
 	writeln("\n\tGerando Tabela com ",maxi," posicoes....\n ");
@@ -27,7 +27,7 @@ void main()
 	while(contador < tabela.length)
 	{
 		tabela[contador] = RAND(maxi);
-		//write(tabela[contador]," ");
+		if (contador < 5) write(tabela[contador]," ");
 		contador++;
 	}
 	write("}.");
@@ -62,9 +62,9 @@ void main()
 
 	write("\tTabela = { ");
 	contador=0;
-    while(contador < tabela.length)
+    while(contador < 15) //tabela.length)
     {
-     // write(tabela[contador]," ");
+        write(tabela[contador]," ");
 	    contador++;
 	}
 	write("}.");

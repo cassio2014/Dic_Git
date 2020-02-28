@@ -4,7 +4,7 @@ import std.stdio;
 import std.datetime;
 pragma(lib, "funcoes");
 
-int maxi = 100_00_000;
+int maxi = 1_000_000;
 int Ti;
 int Tf;
 int Td;
@@ -15,7 +15,7 @@ void main() {
 
 	// TOTAL_ITENS = tabela.length; // variavel da dll
     ToTALNUMEROS(maxi);
-	
+
 	auto tv = Clock.currTime;
 	CLS; // funsao na dll
 	writeln("\n\tGerando Tabela com ",maxi," posicoes....\n ");
@@ -24,7 +24,7 @@ void main() {
 	while(contador < tabela.length)
 	{
 		tabela[contador] = RAND(maxi); // rand funsao na dll
-		//write(tabela[contador]," ");
+		 if (contador < 5) write(tabela[contador]," ");
 		contador++;
 	}
 	write("}.");
@@ -55,10 +55,11 @@ void main() {
 
 	write("\tTabela = { ");
 	contador=0;
-//	while(contador < tabela.length){
-//		write(tabela[contador]," ");
-//		contador++;
-//	}
+   while(contador < 15) // tabela.length)
+   {
+		write(tabela[contador]," ");
+		contador++;
+	}
 	write("}.");
 	writeln("\n");
 	PAUSAR;

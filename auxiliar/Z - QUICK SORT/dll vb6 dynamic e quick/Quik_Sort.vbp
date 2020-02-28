@@ -1,5 +1,5 @@
 Type=Exe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\Windows\System32\stdole2.tlb#OLE Automation
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Form=FRMgeral.frm
 Module=LinhaDeComando; LinhaDeComando.bas
 ResFile32="manifest.RES"
@@ -25,8 +25,8 @@ CodeViewDebugInfo=0
 NoAliasing=0
 BoundsCheck=0
 OverflowCheck=0
-FlPointCheck=0
-FDIVCheck=0
+FlPointCheck=-1
+FDIVCheck=-1
 UnroundedFP=0
 StartMode=0
 Unattended=0

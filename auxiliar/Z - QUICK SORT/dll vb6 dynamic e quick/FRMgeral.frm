@@ -1,23 +1,22 @@
 VERSION 5.00
 Begin VB.Form FRMgeral 
-   BackColor       =   &H00FFFFFF&
+   BackColor       =   &H00004000&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Clasifica"
-   ClientHeight    =   4410
-   ClientLeft      =   -15
-   ClientTop       =   -15
-   ClientWidth     =   7710
+   ClientHeight    =   5340
+   ClientLeft      =   -12
+   ClientTop       =   -12
+   ClientWidth     =   8736
    Icon            =   "FRMgeral.frx":0000
-   LockControls    =   -1  'True
    MaxButton       =   0   'False
-   ScaleHeight     =   4410
-   ScaleWidth      =   7710
+   ScaleHeight     =   5340
+   ScaleWidth      =   8736
    StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton CMDsair 
       Caption         =   "&Sair"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Comic Sans MS"
+         Size            =   20.4
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -25,18 +24,18 @@ Begin VB.Form FRMgeral
          Strikethrough   =   0   'False
       EndProperty
       Height          =   1455
-      Left            =   120
+      Left            =   180
       TabIndex        =   1
-      Top             =   2880
-      Width           =   1815
+      Top             =   3564
+      Width           =   2592
    End
    Begin VB.CommandButton CMDgerar 
-      Caption         =   "Gerar Numeros"
+      Caption         =   "Clasificar"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "DejaVu Sans Mono"
+         Size            =   19.8
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -46,25 +45,25 @@ Begin VB.Form FRMgeral
       TabIndex        =   0
       TabStop         =   0   'False
       Top             =   360
-      Width           =   1815
+      Width           =   2592
    End
    Begin VB.TextBox TXTclasifica 
       BeginProperty Font 
          Name            =   "Arial"
-         Size            =   14.25
+         Size            =   14.4
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   3975
-      Left            =   2040
+      Height          =   4656
+      Left            =   2940
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   2
       Top             =   360
-      Width           =   5655
+      Width           =   5676
    End
 End
 Attribute VB_Name = "FRMgeral"
@@ -103,9 +102,11 @@ Private Sub CMDgerar_Click()
     Tinicial = Time
     Randomize
     TXTclasifica.Text = "Gerando " & Format(NUmeros, "##,###,###,###") & " Numeros..." & vbNewLine
+'**********************************************************************
   For x = 0 To UBound(Tabela)
       Tabela(x) = Int(Rnd * NUmeros + 1)
    Next x
+'**********************************************************************
      Tfinal = Time
      Tdife = Tfinal - Tinicial
 '**********************************************************************
@@ -129,6 +130,20 @@ Private Sub CMDgerar_Click()
          Format(Tdife, "h:mm:ss") & " Seg. " & vbNewLine & vbNewLine & _
           "Interação = " & Format(TOTAL_INTERACAO, "##,###,###,###") & vbNewLine & _
             "Trocas     = " & Format(TOTAL_TROCAS, "##,###,###,###") & vbNewLine & vbNewLine
+            
+   TXTclasifica.Text = _
+         TXTclasifica.Text & "{ "
+
+   For x = 0 To 10
+      TXTclasifica.Text = _
+            TXTclasifica.Text & Tabela(x) & "  "
+      DoEvents
+   Next x
+
+   TXTclasifica.Text = _
+         TXTclasifica.Text & "... }" & vbNewLine
+
+            
    CMDgerar.Enabled = True
 End Sub
 

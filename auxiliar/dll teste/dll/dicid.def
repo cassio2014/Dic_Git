@@ -1,5 +1,0 @@
-LIBRARY            "dici.dll"
-EXETYPE             NT
-SUBSYSTEM       WINDOWS
-CODE                    SHARED EXECUTE
-DATA                    WRITE

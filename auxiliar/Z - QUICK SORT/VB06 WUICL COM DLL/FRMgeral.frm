@@ -1,17 +1,16 @@
 VERSION 5.00
 Begin VB.Form FRMgeral 
-   BackColor       =   &H00FFFFFF&
+   BackColor       =   &H00400000&
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Clasifica"
-   ClientHeight    =   4410
-   ClientLeft      =   -15
-   ClientTop       =   -15
-   ClientWidth     =   7710
+   ClientHeight    =   5040
+   ClientLeft      =   -12
+   ClientTop       =   -12
+   ClientWidth     =   7704
    Icon            =   "FRMgeral.frx":0000
-   LockControls    =   -1  'True
    MaxButton       =   0   'False
-   ScaleHeight     =   4410
-   ScaleWidth      =   7710
+   ScaleHeight     =   5040
+   ScaleWidth      =   7704
    StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton CMDsair 
       Caption         =   "&Sair"
@@ -24,47 +23,47 @@ Begin VB.Form FRMgeral
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1395
-      Left            =   30
+      Height          =   1500
+      Left            =   24
       TabIndex        =   1
-      Top             =   2880
-      Width           =   1995
+      Top             =   3444
+      Width           =   2088
    End
    Begin VB.CommandButton CMDgerar 
       Caption         =   "&Clasificar"
       Default         =   -1  'True
       BeginProperty Font 
          Name            =   "Arial"
-         Size            =   20.25
+         Size            =   20.4
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1515
-      Left            =   90
+      Height          =   1620
+      Left            =   24
       TabIndex        =   0
       TabStop         =   0   'False
-      Top             =   405
-      Width           =   1965
+      Top             =   84
+      Width           =   2088
    End
    Begin VB.TextBox TXTclasifica 
       BeginProperty Font 
          Name            =   "Arial"
-         Size            =   14.25
+         Size            =   14.4
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   3930
-      Left            =   2115
+      Height          =   4908
+      Left            =   2148
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   2
-      Top             =   330
+      Top             =   60
       Width           =   5505
    End
 End
@@ -138,6 +137,20 @@ Private Sub CMDgerar_Click()
          Format(Tdife, "h:mm:ss") & " Seg. " & vbNewLine & vbNewLine & _
           "Interação = " & Format(Ver_interasao, "#,###,###,###,###") & vbNewLine & _
             "Trocas     = " & Format(Ver_trocas, "#,###,###,###,###") & vbNewLine & vbNewLine
+    
+    
+   TXTclasifica.Text = _
+         TXTclasifica.Text & "{ "
+
+   For x = 0 To 10
+      TXTclasifica.Text = _
+            TXTclasifica.Text & Tabela(x) & "  "
+      DoEvents
+   Next x
+
+   TXTclasifica.Text = _
+         TXTclasifica.Text & "... }" & vbNewLine
+
     
    CMDgerar.Enabled = True
    CMDgerar.SetFocus

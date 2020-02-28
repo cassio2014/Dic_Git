@@ -4,11 +4,12 @@ rem **********************************************
 rem dmd -O -shared  -offuncoes.dll funcoes.d dll.d 
 rem dmd -O -lib -offuncoes.lib funcoes.d dll.d 
 rem ***********************************************
-dmd -O  -offuncoes.dll -L/IMPLIB  funcoes.d dll.d func.def
-dll2def funcoes.dll 
-"C:\Program Files\Microsoft Visual Studio\VC98\bin\"link /dump /exports funcoes.dll /out:funcoes.txt
+dmd -O  -offuncoes.dll -L/IMPLIB  funcoes.d dll.d Dfuncoes.def
+criadef funcoes.dll 
+path=%vc%;%path%
+link /dump /exports funcoes.dll /out:funcoes.txt
+rem "C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin\"link /dump /exports funcoes.dll /out:funcoes.txt
 call test.bat
-
 @echo off
 copy /y *.dll  ..\
 copy /y *.dll ..\"ler a dll"
