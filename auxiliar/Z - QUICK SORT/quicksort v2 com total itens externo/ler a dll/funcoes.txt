@@ -18,9 +18,9 @@ File Type: DLL
           2    1 00003388 CLS
           3    2 000032E0 PAUSAR
           4    3 00003430 RAND
-          5    4 00064010 TOTAL_ITENS
-          6    5 00064018 TOTAL_RECURS
-          7    6 00064020 TOTAL_TROCAS
+          5    4 00065010 TOTAL_ITENS
+          6    5 00065018 TOTAL_RECURS
+          7    6 00065020 TOTAL_TROCAS
           8    7 00003440 ToTALNUMEROS
 
   Summary
@@ -31,4 +31,4 @@ File Type: DLL
         1000 .idata
         6000 .reloc
         1000 .tls
-       61000 DPB
+       62000 DPB

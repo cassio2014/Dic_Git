@@ -6,7 +6,7 @@ import std.datetime;
 
 pragma(lib, "funcoes");
 
-int maxi = 1_000_000;
+int maxi = 60_000_000;
 int Ti;
 int Tf;
 int Td;

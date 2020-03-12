@@ -4,8 +4,9 @@ rem **********************************************
 rem dmd -O -shared  -offuncoes.dll funcoes.d dll.d 
 rem dmd -O -lib -offuncoes.lib funcoes.d dll.d 
 rem ***********************************************
-dmd -O  -offuncoes.dll -L/IMPLIB  funcoes.d dll.d Dfuncoes.def
+dmd -O -release -m32 -offuncoes.dll -L/IMPLIB  funcoes.d dll.d Dfuncoes.def
 criadef funcoes.dll 
+rem pause
 path=%vc%;%path%
 link /dump /exports funcoes.dll /out:funcoes.txt
 rem "C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin\"link /dump /exports funcoes.dll /out:funcoes.txt

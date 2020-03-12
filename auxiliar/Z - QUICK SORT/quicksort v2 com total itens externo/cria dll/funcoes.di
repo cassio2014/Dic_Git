@@ -15,6 +15,7 @@ long TOTAL_RECURS;
 long TOTAL_TROCAS;
 }
 //=======================
+export
 void ToTALNUMEROS(int TOT_NUM);
 //=======================
 export
