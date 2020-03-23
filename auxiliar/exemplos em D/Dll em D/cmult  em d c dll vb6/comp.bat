@@ -1,8 +1,8 @@
 @echo off
 cls
-"C:\Program Files\Microsoft Visual Studio\VB98\vb6.exe" /m Cmult.vbp
+"C:\Program Files (x86)\Microsoft Visual Studio\VB98\vb6.exe" /m Cmult.vbp
 dmd -ofcmult.dll -L/IMPLIB cmult.d dll.d cmult.def
-"C:\Program Files\Microsoft Visual Studio\VC98\Bin\link" /dump /exports cmult.dll /out:cmult.txt
+"C:\Program Files (x86)\Microsoft Visual Studio\VC98\Bin\link" /dump /exports cmult.dll /out:cmult.txt
 dmd  -O -release lercmult.d cmult.lib cmult.RES
 path=%bcc32%
 bcc32 -w- teste.cpp
