@@ -7,8 +7,8 @@ import std.process;
 
 void main() {
 
-    write("\n\nentre com fraze acentuada:\n ");
+    write("\n\nEntre com fraze acentuada:\n ");
     auto m = readln.chomp;
-    writeln("a fraze digitada : ",m);
+    writeln("a fraze digitada \n: ",m);
 	 wait(spawnShell("pause"));
 }
