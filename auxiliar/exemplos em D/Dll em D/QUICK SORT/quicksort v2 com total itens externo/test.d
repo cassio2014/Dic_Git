@@ -54,11 +54,11 @@ void main() {
 	      tv.second,"\n\n");
 
 	write("\tTabela = { ");
-//	contador=0;
-//	while(contador < tabela.length){
-//		write(tabela[contador]," ");
-//		contador++;
-//	}
+	contador=0;
+	while(contador < 10){
+		write(tabela[contador]," ");
+		contador++;
+	}
 	write("}.");
 	writeln("\n");
 	PAUSAR;

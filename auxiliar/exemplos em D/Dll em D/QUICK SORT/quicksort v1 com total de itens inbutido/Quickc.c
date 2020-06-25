@@ -63,9 +63,9 @@ int main(){
 
     printf("\n\n\tMatriz organizada em %03d segundos.\n\n",tg);
     printf("\tHora Final: %2d:%02d:%02d.%02d\n\n", lt.wHour, lt.wMinute,lt.wSecond, lt.wMilliseconds);
-    for(cont=0;cont<maxi;cont++)
+    for(cont=0;cont<15;cont++)
    {
-            /* printf("\t%i",a[cont]);*/
+            printf("\t%i",a[cont]);
      }
 
   printf("\n");

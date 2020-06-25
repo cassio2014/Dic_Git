@@ -67,9 +67,9 @@ int main(){
     
     printf("\n\n\tMatriz organizada em %d segundos.\n\n",tg);
     printf("\tHora Final: %2d:%02d:%02d.%02d\n\n", lt.wHour, lt.wMinute,lt.wSecond, lt.wMilliseconds);
-    for(cont=0;cont<maxi;cont++)
+    for(cont=0;cont<10;cont++)
    {
-            /* printf("\t%i",a[cont]);*/
+             printf("\t%i",a[cont]);
      }
 
   printf("\n\n tecle <enter> para sair.");

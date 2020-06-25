@@ -12,7 +12,7 @@ DWORD tct;
 int tg;
 int dife;
 
-typedef void (WINAPI*Dfunc)(...);
+typedef void (WINAPI*Dfunc)(int *);
 Dfunc CLASIFICAR;
 
 typedef void (WINAPI*Dfun)();
@@ -73,22 +73,22 @@ int main(){
   for(cont=0;cont<maxi;cont++)
 	{
 	   a[cont]=rand() %maxi;
-	   /*a[cont]=gera(maxi);*/
+	   /* a[cont]=gera(maxi); */
 	}
    
    dife = GetTickCount()-tgt;
    if (dife < 0) dife=60 + dife;
    
   printf("\n\tMatriz de %d de itens, gerada aleatoriamente: %d ms\n\n ",maxi,dife);
-  /*
-  for(cont=0;cont<maxi;cont++)
+ 
+  for(cont=0;cont<10;cont++)
     {
           printf(" %i",a[cont]);
     }
-*/
 
 
-    /* Pega a Hora final*/
+ /*
+     Pega a Hora final*/
      GetLocalTime(&lt);
      printf("\tHora inicial: %2d:%02d:%02d.%02d\n\n",
 	 lt.wHour,
@@ -118,12 +118,12 @@ int main(){
   lt.wMinute,
   lt.wSecond,
   lt.wMilliseconds);
- /*
-    for(cont=0;cont<maxi;cont++)
+
+    for(cont=0;cont<10;cont++)
     {
        printf(" %i",a[cont]);
      }
-  */
+  
   printf("\n");
   system("pause");
   FreeLibrary((HMODULE)hLib);

@@ -118,12 +118,12 @@ int main(){
   lt.wMinute,
   lt.wSecond,
   lt.wMilliseconds);
- /*
-    for(cont=0;cont<maxi;cont++)
+ 
+    for(cont=0;cont<10;cont++)
     {
        printf(" %i",a[cont]);
      }
-  */
+  
   printf("\n");
   pausar;
   FreeLibrary((HMODULE)hLib);
