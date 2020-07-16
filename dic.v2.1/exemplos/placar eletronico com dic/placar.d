@@ -33,7 +33,7 @@ import dic.dic;
 
 pragma(lib,"dic");
 
-extern(C) int kbhit(); // @suppress(dscanner.style.undocumented_declaration)
+extern(C) int kbhit(); 
 
 /** string rolar movimenta caracter por caracter pela trela **/
 string rolar(string args)
@@ -58,7 +58,7 @@ int main(string[] args)
     while(!kbhit)
     {
         placar = rolar(placar);
-        write("\r\t",placar);
+        write("\r ",placar);
         stdout.flush();
         Thread.sleep(100.msecs);
     }
