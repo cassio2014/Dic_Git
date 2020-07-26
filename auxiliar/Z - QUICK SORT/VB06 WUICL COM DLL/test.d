@@ -3,7 +3,9 @@ module test;
 import funcoes;
 import std.stdio;
 import std.datetime;
+import dic.dic;
 
+pragma(lib,"dic");
 pragma(lib, "funcoes");
 
 int maxi = 60_000_000;
@@ -15,7 +17,7 @@ void main()
 {
 	int[] tabela;
 	tabela.length = maxi;
-
+	
    ToTALNUMEROS(maxi);
 
 	auto tv = Clock.currTime;
@@ -27,13 +29,15 @@ void main()
 	while(contador < tabela.length)
 	{
 		tabela[contador] = RAND(maxi);
-		if (contador < 5) write(tabela[contador]," ");
+		if (contador < 5)
+		   write(tabela[contador]," ");
 		contador++;
+
 	}
-	write("}.");
+	write("... }.");
 	tv = Clock.currTime;
 	Ti=tv.second;
-	write("\n\n\tHorario inicial : ",
+	dwrite("\n\n\tHorário inicial : ",
 	      tv.hour,":",
 	      tv.minute,":",
 	      tv.second);
@@ -54,20 +58,28 @@ void main()
 	recursao = TOTALRECURS;
 	writeln("\tclasificada em ",Td," segundos.!!!\n");
 	writeln("\t",trocas," Trocas efetuadas.");
-	writeln("\t",recursao," Chamada de recursao efetuadas.");
-	write("\n\tHorario final  : ",
+	dwriteln("\t",recursao," Chamada de recursão efetuadas.");
+	dwrite("\n\tHorário final  : ",
 	      tv.hour,":",
 	      tv.minute,":",
 	      tv.second,"\n\n");
 
 	write("\tTabela = { ");
 	contador=0;
-    while(contador < 15) //tabela.length)
+    while(contador < 15)//tabela.length)
     {
-        write(tabela[contador]," ");
+      //  if(contador % 8 == 0)write("\n ");
+      write(tabela[contador]," "); //"\t");
 	    contador++;
 	}
-	write("}.");
+	write("... }.");
 	writeln("\n");
 	PAUSAR;
+
+
+
+
+
+
+
 }
