@@ -1,4 +1,0 @@
-tcc res 
-
-windres -O coff tcc.rc -o tcc.o	
-tcc Quickc.c tcc.o -o Quickc.exe

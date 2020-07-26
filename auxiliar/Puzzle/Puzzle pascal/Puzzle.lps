@@ -2,13 +2,16 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <BuildModes Active="Default"/>
     <Units Count="2">
       <Unit0>
         <Filename Value="Puzzle.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="12"/>
+        <CursorPos X="26" Y="17"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="puzzleu.pas"/>
@@ -18,13 +21,115 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PuzzleU"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="21"/>
-        <CursorPos X="43" Y="36"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="55"/>
+        <CursorPos Y="67"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="24" HistoryIndex="23">
+      <Position1>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="243" Column="6"/>
+      </Position1>
+      <Position2>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="9" Column="20"/>
+      </Position2>
+      <Position3>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="21" Column="5" TopLine="13"/>
+      </Position3>
+      <Position4>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="25" Column="5" TopLine="16"/>
+      </Position4>
+      <Position5>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="26" Column="5" TopLine="18"/>
+      </Position5>
+      <Position6>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="38" Column="13" TopLine="31"/>
+      </Position6>
+      <Position7>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="33" Column="20" TopLine="30"/>
+      </Position7>
+      <Position8>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="67" TopLine="60"/>
+      </Position8>
+      <Position9>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="3"/>
+      </Position9>
+      <Position10>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="56" Column="3" TopLine="48"/>
+      </Position10>
+      <Position11>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="270" Column="41" TopLine="264"/>
+      </Position11>
+      <Position12>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="244" Column="6" TopLine="238"/>
+      </Position12>
+      <Position13>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="245" Column="6" TopLine="239"/>
+      </Position13>
+      <Position14>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="244" Column="6" TopLine="238"/>
+      </Position14>
+      <Position15>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="245" Column="6" TopLine="239"/>
+      </Position15>
+      <Position16>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="244" Column="6" TopLine="238"/>
+      </Position16>
+      <Position17>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="243" Column="6" TopLine="237"/>
+      </Position17>
+      <Position18>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="244" Column="6" TopLine="238"/>
+      </Position18>
+      <Position19>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="243" Column="6" TopLine="237"/>
+      </Position19>
+      <Position20>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="272" TopLine="268"/>
+      </Position20>
+      <Position21>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="102" Column="3" TopLine="99"/>
+      </Position21>
+      <Position22>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="248" TopLine="244"/>
+      </Position22>
+      <Position23>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="250" Column="6" TopLine="244"/>
+      </Position23>
+      <Position24>
+        <Filename Value="puzzleu.pas"/>
+        <Caret Line="102" Column="3" TopLine="100"/>
+      </Position24>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
 </CONFIG>

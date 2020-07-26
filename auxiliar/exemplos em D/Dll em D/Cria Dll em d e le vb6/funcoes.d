@@ -20,22 +20,22 @@ void CLS(){
 //=============================================
 export
 int RAND(int a) {
-	import std.random;
-	auto r = uniform(0,a + 1);
-	return r;
+    import std.random;
+    auto r = uniform(0,a + 1);
+    return r;
 }
 //=============================================
 export
 void ToTALNUMEROS(ref int TOT_NUM)
 {
-	TOTAL_ITENS = TOT_NUM;
+    TOTAL_ITENS = TOT_NUM;
 }
 //=============================================
 export
 long TOTALRECURS()
 {
-	long aux = 0;
-	aux = TOTAL_RECURS;
+    long aux = 0;
+    aux = TOTAL_RECURS;
     return aux;
 }
 //=============================================
@@ -43,16 +43,16 @@ export
 long TOTALTROCAS()
 {
     long aux = 0;
-	aux = TOTAL_TROCAS;
+    aux = TOTAL_TROCAS;
     return aux;
 }
 //=============================================
 export
 void CLASIFICAR(int *a)
 {
-	TOTAL_RECURS = 0;
-	TOTAL_TROCAS = 0;
-	QS(a, 0 ,TOTAL_ITENS - 1);
+    TOTAL_RECURS = 0;
+    TOTAL_TROCAS = 0;
+    QS(a, 0 ,TOTAL_ITENS - 1);
 }
 //==============================================
 
@@ -66,17 +66,17 @@ void QS(int *a, int l,int r)
 // ordenacao
   do
   {
-		while(a[i]< x && i<r ) i++;
-		while(x<a[j] && j>l ) j--;
-		if(i<=j)
-			{
-				y=a[i];
-				a[i]=a[j];
-				a[j]=y;
-				i++;
-				j--;
-				TOTAL_TROCAS++;
-			}
+        while(a[i]< x && i<r ) i++;
+        while(x<a[j] && j>l ) j--;
+        if(i<=j)
+            {
+                y=a[i];
+                a[i]=a[j];
+                a[j]=y;
+                i++;
+                j--;
+                TOTAL_TROCAS++;
+            }
   } while(i<=j);
   if(l<j) { QS(a, l , j);TOTAL_RECURS++;}
   if(i<r) { QS(a, i , r);TOTAL_RECURS++;}

@@ -5,7 +5,8 @@ unit PuzzleU;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  Classes, SysUtils, FileUtil,
+  Forms, Controls, Graphics, Dialogs, StdCtrls,
   ExtCtrls, Buttons;
 
 type
@@ -41,6 +42,7 @@ type
   procedure MoverBotao(Index: Integer);
   procedure Inverter(Ix: integer; Iy: integer);
   procedure Misturar;
+  procedure pnPUZZLEClick(Sender: TObject);
   procedure pnPUZZLEDblClick(Sender: TObject);
   private
     { private declarations }
@@ -75,7 +77,7 @@ begin
 
      Randomize;
 
-     for x:= 0 to 30 do
+     for x:= 1 to 32 do
      begin
           IndA:=Random(16)+1;
           IndB:=Random(16)+1;
@@ -93,6 +95,10 @@ begin
 
      TotalClick:=0;
      lbTotClick.Caption:= intTostr(TotalClick);
+end;
+
+procedure TfrmPUZZLE.pnPUZZLEClick(Sender: TObject);
+begin
 
 end;
 
@@ -223,6 +229,7 @@ end;
 
 procedure TfrmPUZZLE.btmSairClick(Sender: TObject);
 begin
+     //sai do programa
      Application.Terminate;
 end;
 
@@ -263,9 +270,10 @@ begin
        Botao[x].OnClick:= @Botaoclick;
      end;
 
+
      macete:= false;
-     Nome:= 'Cassio';
-     frmPUZZLE.Caption:=frmPUZZLE.Caption + ' - '+ Nome;
+     Nome:= 'WishBone';
+     frmPUZZLE.Caption:= Nome;
      Misturar;
      btmMisturar.Enabled:=false;
 
