@@ -1,4 +1,5 @@
 @echo off
 path=c:\tcc;%path%
-tcc quicktcc.c resource.o
+tcc -m32 quicktcc.c resource.o
+
 

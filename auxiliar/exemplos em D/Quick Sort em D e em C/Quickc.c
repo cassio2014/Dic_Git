@@ -2,6 +2,9 @@
 
 #include<stdio.h>
 #include<windows.h>
+#include <stdlib.h>// necessário p/ as funções rand() e srand()
+#include <time.h>//necessário p/ função time()
+
 
 #define maxi 60000000 
 #pragma resource "bcc32.RES"
@@ -16,7 +19,10 @@ DWORD tgt;
 DWORD tct;
 int tg;
 int *a;
-	
+
+int xx;
+int yy; 
+  
 int main()
 {    
 
@@ -32,42 +38,29 @@ int main()
       }else{
           printf ("\n\n\t** Memoria Alocada com Sucesso **");
       }      
-	 
-  /*
- typedef struct _SYSTEMTIME {
-    WORD wYear;
-    WORD wMonth;
-    WORD wDayOfWeek;
-    WORD wDay;
-    WORD wHour;
-    WORD wMinute;
-    WORD wSecond;
-    WORD wMilliseconds;
-  } SYSTEMTIME, *PSYSTEMTIME;
-*/  
 
 /* Pega a hora do systena local.*/  
     
     GetLocalTime(&lt);
-  
-  
     
-  printf("\n\n\tHora inicial: %2d:%02d:%02d.%02d\n\n", lt.wHour, lt.wMinute,lt.wSecond, lt.wMilliseconds);
+  printf("\n\tHora inicial: %2d:%02d:%02d.%02d\n\n", lt.wHour, lt.wMinute,lt.wSecond, lt.wMilliseconds);
 
   /* tgt = tempo para geração da tabela */
    tgt = GetTickCount();
 
+	srand(time(NULL));
+
   /* entrada de dados*/
   for(cont=0;cont<maxi;cont++)
 	{
-	 a[cont]=rand() %maxi;
+	 a[cont]=rand() % maxi;
 	}
 
   printf("\tMatriz de %d de itens, gerada aleatoriamente: %d ms\n\n ",maxi,GetTickCount()-tgt);
-  for(cont=0;cont<maxi;cont++){
-		/*printf(" %i",a[cont]);*/
+  for(cont=0;cont<7;cont++){
+		printf(" %i",a[cont]);
 		}
-
+		printf("\n\n");
   /*  tct = Tempo para clasificar a taleba inicial */		
   tct = GetTickCount();
   
@@ -88,15 +81,25 @@ int main()
   printf("\t%ld chamadas de recursao efetuadas \n\n",teste);
    
    printf("\tHora Final: %2d:%02d:%02d.%02d\n\n", lt.wHour, lt.wMinute,lt.wSecond, lt.wMilliseconds);
-   
-
-  
- // for(cont=0;cont<maxi;cont++){
-		
-        //  printf(" \t%i",a[cont]);
-          //printf("\n\n ");
+   printf("\t");
+  for(cont=0;cont<maxi;cont++){
+        yy = cont;
+        if ((a[cont] >= 0) && ( a[cont] <= 10 )) 
+		{
+		  xx = cont + 1;
+		  if ( a[yy] != a[xx]  )
+		  {
+		       printf("%i ",a[cont]);
+		  } 
+		 }
+			 else
+		 {
+		 	break;
+		 }
+	
+   }
+         printf("\n\n ");
       
-		  // }
   system("pause");
   return 0;
 

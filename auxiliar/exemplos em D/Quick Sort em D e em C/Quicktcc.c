@@ -90,14 +90,12 @@ int main()
    
    printf("\tHora Final: %2d:%02d:%02d.%02d\n\n", lt.wHour, lt.wMinute,lt.wSecond, lt.wMilliseconds);
    
-
-  
- // for(cont=0;cont<maxi;cont++){
-		
-        //  printf(" \t%i",a[cont]);
-          //printf("\n\n ");
-      
-		  // }
+ /*
+ for(cont=0;cont<max;cont++)
+ {
+        printf(" \t%i",a[cont]);
+ }
+ */
   system("pause");
   return 0;
 

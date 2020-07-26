@@ -1,7 +1,8 @@
 import std.stdio;
 import std.process;
 import std.random;
-import std.c.time;
+//import std.c.time;
+import core.stdc.time ;
 import std.datetime;
 import std.algorithm;
 
