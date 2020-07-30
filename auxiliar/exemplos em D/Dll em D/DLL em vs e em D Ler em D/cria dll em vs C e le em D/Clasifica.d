@@ -1,72 +1,46 @@
-module clasifica;
+module lerDll;
 
 import funcoes;
-
 import std.stdio;
-import std.datetime;
+import std.process;
 import std.random;
 
-int rand(int a) {
-	auto r = uniform(0,a + 1);
-	return r;
-}	
 
+int main(string[] argv)
+{
+    CLS;
+    TOTAL_ITENS = 60000000;
+    int[] a;
+    a.length = TOTAL_ITENS;
+    int x;
+    int y;
+    writeln("\n  ==> gerando ",TOTAL_ITENS, " numeros.");
+    write("\n\n{ ");
+    for(x=0;x<TOTAL_ITENS; x++){
+        a[x]=uniform(0,TOTAL_ITENS+1);
+ 		y++;
+		if (y <= 4) write(a[x], " ");
+    }
 
-int maxi = 60000000;
+        write("}\n\n ");
 
-MonoTime  Ti; // tempo inicial
-MonoTime  Tf; // tempo final
-Duration  Td; // tempo difirença
+    CLASIFICAR(a.ptr);
 
-void main() {
+    writeln("\t",TOTAL_TROCAS," trocas.");
+    writeln("\t",TOTAL_RECURS," recursao(quick).\n");
+    y = 0;
+    write("\n{ ");
+    for(x=0;x<TOTAL_ITENS; x++)
+    {
+       if (a[x] != 0 )
+       {
+		  y++;
+		  if (y <= 10)   write(a[x], " ");
+	    }
+    }
+    write(" --> ",a[TOTAL_ITENS - 1]);
+    writeln(" }\n\n ");
 
-	int[] tabela;
-	tabela.length = maxi; 
- 	TOTAL_ITENS = maxi;
-	
-    Ti = MonoTime.currTime;
-	CLS;
-    stdout.flush();
-	writeln("\n\tGerando Tabela com ",maxi," posicoes....\n ");
-	write("\tTabela = { ");
-	int contador=0;
-    stdout.flush();
-	while(contador < tabela.length)
-	{
-		tabela[contador] = rand(maxi);
-		//write(tabela[contador]," ");
-		contador++;
-	}
-	write("}.");
-    Tf = MonoTime.currTime;
-    Td = Tf - Ti;
-	write("\n\n\tTabela Gerada em ",Td.seconds," segundos.");
-    Ti = MonoTime.currTime;
-	writeln("\n\n\tclasificando....");
-    stdout.flush();
-	//==============================
-		 CLASIFICAR(tabela.ptr);
-	//==============================
-    stdout.flush();
-
-    Tf = MonoTime.currTime;
-    Td = Tf - Ti;
-
-
-	write("\tclasificada em ");
-    writeln(Td.seconds," segundos.!!!\n");
-	writeln("\t",TOTAL_TROCAS," Trocas efetuadas.");
-	writeln("\t",TOTAL_RECURS," Chamada de recursao efetuadas.");
-
-	write("\n\tTabela = { ");
-//	contador=0;
-// 	while(contador < tabela.length){
-//		write(tabela[contador]," ");
-//		contador++;
-//	}
- 
-	write("}.");
-	writeln("\n");
 	PAUSAR;
-	
+    return 0;
 }

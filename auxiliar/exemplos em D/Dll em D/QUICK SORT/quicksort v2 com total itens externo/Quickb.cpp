@@ -3,7 +3,7 @@
 
 #pragma resource "bcc.RES"
 
-int maxi = 60000000;
+int maxi = 6000;
 int cont=0;
 
 SYSTEMTIME lt;

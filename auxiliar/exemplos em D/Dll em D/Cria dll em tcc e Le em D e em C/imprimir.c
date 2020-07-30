@@ -1,7 +1,7 @@
 //*********************************************************
 //    tcc compilar   tcc -shared imprimir.c
 //*********************************************************
-
+#include <stdio.h>
 #include <windows.h>
 #define DLL_EXPORT __declspec(dllexport)
 
