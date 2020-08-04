@@ -1,4 +1,0 @@
-LIBRARY TestDLL
-EXPORTS
-    addition
-    Main
