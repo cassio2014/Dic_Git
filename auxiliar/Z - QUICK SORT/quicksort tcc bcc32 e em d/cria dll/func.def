@@ -1,0 +1,8 @@
+LIBRARY        "funcoes.dll"
+DESCRIPTION    "Minha DLL escrita em D"
+SUBSYSTEM       WINDOWS
+EXETYPE	        NT
+CODE            SHARED EXECUTE
+DATA            WRITE
+
+
