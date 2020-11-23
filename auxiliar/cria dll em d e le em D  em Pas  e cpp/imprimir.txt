@@ -1,0 +1,27 @@
+
+Dump of file imprimir.dll
+
+File Type: DLL
+
+  Section contains the following exports for IMPRIMIR.DLL
+
+           0 characteristics
+           0 time date stamp Wed Dec 31 21:00:00 1969
+        0.00 version
+           1 ordinal base
+           1 number of functions
+           1 number of names
+
+    ordinal hint RVA      name
+
+          1    0 000032E0 imprima
+
+  Summary
+
+       1F000 .CRT$XIA
+        1000 .debug
+        1000 .edata
+        1000 .idata
+        6000 .reloc
+        1000 .tls
+       65000 DPB
