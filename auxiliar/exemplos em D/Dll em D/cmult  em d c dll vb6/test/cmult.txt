@@ -1,0 +1,27 @@
+
+Dump of file cmult.dll
+
+File Type: DLL
+
+         Section contains the following Exports for CMULT.DLL
+
+                   0 characteristics
+                   0 time date stamp Wed Dec 31 21:00:00 1969
+                 0.0 version
+                   1 base
+                   1 # functions
+                   1 # names
+
+            ordinal hint   name
+
+                  1    0   Multiplica  (00003010)
+
+     Summary
+
+        B000 .CRT$XIA
+        1000 .debug
+        1000 .edata
+        1000 .idata
+        3000 .reloc
+        1000 .tls
+       1B000 _TEXT

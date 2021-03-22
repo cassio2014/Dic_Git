@@ -1,0 +1,28 @@
+
+Dump of file mydll.dll
+
+File Type: DLL
+
+  Section contains the following exports for MYDLL.DLL
+
+           0 characteristics
+           0 time date stamp Wed Dec 31 21:00:00 1969
+        0.00 version
+           1 ordinal base
+           2 number of functions
+           2 number of names
+
+    ordinal hint RVA      name
+
+          1    0 00003290 dllprint
+          2    1 000032A0 somar
+
+  Summary
+
+        F000 .CRT$XIA
+        1000 .debug
+        1000 .edata
+        1000 .idata
+        3000 .reloc
+        1000 .tls
+       31000 DPB
