@@ -25,6 +25,7 @@ int main(){
   ," teste ref = ",testeref(A)
   ," valor de A = ", A);
   
+  write("\n--> Tecle <enter>");
  getchar();
  return 0;
 }

@@ -1,4 +1,5 @@
 @echo off
-@echo ษอออออ
-@echo Amanhฦ 1ง de maro de 2018
-pause
+@echo ษออออออออออออออออออออออออออป
+@echo บAmanh 1ง de maro de 2021บ
+@echo ศออออออออออออออออออออออออออผ
+pause 
