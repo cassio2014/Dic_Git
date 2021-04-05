@@ -1,6 +1,0 @@
-Este bat executa  a compilação  nios seguintes 
-compiladores :
-
-Linfuagem D: dmd .exe
-           c: c/c++ vc6
-         vb6: vb instalado  
