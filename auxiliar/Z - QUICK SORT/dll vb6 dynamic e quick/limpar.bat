@@ -1,3 +1,3 @@
 @echo off
-del *.exe *.lib *.dll *.def *.exp
+del Quik_Sort.exe *.lib *.dll *.def *.exp
 exit

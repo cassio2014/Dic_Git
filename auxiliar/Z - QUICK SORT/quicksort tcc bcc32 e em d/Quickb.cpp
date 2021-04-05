@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>// necessário p/ as funções rand() e srand()
+#include <time.h>//necessário p/ função time()
 #include <windows.h>
 
 #pragma resource "bcc.RES"
@@ -71,6 +73,9 @@ int main(){
      tgt = GetTickCount();
 
   /* entrada de dados*/
+  
+  srand(time(NULL));
+  
   for(cont=0;cont<maxi;cont++)
 	{
 	   a[cont]=rand() %maxi;
