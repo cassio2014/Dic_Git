@@ -63,7 +63,7 @@ Private Sub Quick_Sort(LB As Variant, UB As Variant, Feld() As Long)
         Interasao = Interasao + 1
         Call Quick_Sort(P1, UB, Feld)
     End If
-    
+   
 End Sub
 
 

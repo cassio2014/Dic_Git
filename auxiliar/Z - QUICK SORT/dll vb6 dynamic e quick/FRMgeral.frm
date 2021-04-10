@@ -4,19 +4,19 @@ Begin VB.Form FRMgeral
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Clasifica"
    ClientHeight    =   5340
-   ClientLeft      =   -15
-   ClientTop       =   -15
-   ClientWidth     =   8745
+   ClientLeft      =   -12
+   ClientTop       =   -12
+   ClientWidth     =   8736
    Icon            =   "FRMgeral.frx":0000
    MaxButton       =   0   'False
    ScaleHeight     =   5340
-   ScaleWidth      =   8745
+   ScaleWidth      =   8736
    StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton CMDsair 
       Caption         =   "&Sair"
       BeginProperty Font 
          Name            =   "Comic Sans MS"
-         Size            =   20.25
+         Size            =   20.4
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -33,7 +33,7 @@ Begin VB.Form FRMgeral
       Caption         =   "Clasificar"
       BeginProperty Font 
          Name            =   "DejaVu Sans Mono"
-         Size            =   19.5
+         Size            =   19.8
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -50,7 +50,7 @@ Begin VB.Form FRMgeral
    Begin VB.TextBox TXTclasifica 
       BeginProperty Font 
          Name            =   "Arial"
-         Size            =   14.25
+         Size            =   14.4
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
