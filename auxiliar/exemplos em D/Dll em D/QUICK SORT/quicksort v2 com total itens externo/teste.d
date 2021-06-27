@@ -4,7 +4,7 @@ import std.stdio;
 import std.datetime;
 pragma(lib, "funcoes");
 
-int maxi = 60_000_000;
+int maxi = 60_000;
 int Ti;
 int Tf;
 int Td;
@@ -55,7 +55,7 @@ void main() {
 
 	write("\tTabela = { ");
 	contador=0;
-	while(contador < 10){
+	while(contador < 10 ){  //tabela.length){
 		write(tabela[contador]," ");
 		contador++;
 	}

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
+#include <time.h>
 
 #pragma resource "bcc.RES"
 
@@ -12,8 +13,8 @@ DWORD tct;
 int tg;
 int dife;
 
-typedef void (WINAPI*Dfunc)(int *);
-Dfunc CLASIFICAR;
+typedef void (WINAPI*Dfunci)(int *x);
+Dfunci CLASIFICAR;
 
 typedef void (WINAPI*Dfun)();
 //Dfun PAUSAR;
@@ -42,7 +43,7 @@ int main(){
        return 51;
     }
 
-    CLASIFICAR=(Dfunc)GetProcAddress((HMODULE)hLib,"CLASIFICAR");
+    CLASIFICAR=(Dfunci)GetProcAddress((HMODULE)hLib,"CLASIFICAR");
     TOTAL_ITENS=(Dvar)GetProcAddress((HMODULE)hLib,"TOTAL_ITENS");
     TOTAL_RECURS=(Tvar)GetProcAddress((HMODULE)hLib,"TOTAL_RECURS");
     TOTAL_TROCAS=(Tvar)GetProcAddress((HMODULE)hLib,"TOTAL_TROCAS");
@@ -68,28 +69,26 @@ int main(){
 
    /* tgt = tempo para geracao da tabela */
      tgt = GetTickCount();
+     
+     
+     srand(time(NULL));
 
   /* entrada de dados*/
   for(cont=0;cont<maxi;cont++)
 	{
 	   a[cont]=rand() %maxi;
-	   /* a[cont]=gera(maxi); */
+	   /*a[cont]=gera(maxi);*/
 	}
    
    dife = GetTickCount()-tgt;
    if (dife < 0) dife=60 + dife;
    
   printf("\n\tMatriz de %d de itens, gerada aleatoriamente: %d ms\n\n ",maxi,dife);
- 
-  for(cont=0;cont<10;cont++)
-    {
-          printf(" %i",a[cont]);
-    }
 
-
- /*
-     Pega a Hora final*/
+    /* Pega a Hora final*/
+    
      GetLocalTime(&lt);
+     
      printf("\tHora inicial: %2d:%02d:%02d.%02d\n\n",
 	 lt.wHour,
 	 lt.wMinute,
@@ -118,15 +117,19 @@ int main(){
   lt.wMinute,
   lt.wSecond,
   lt.wMilliseconds);
-
-    for(cont=0;cont<10;cont++)
-    {
-       printf(" %i",a[cont]);
-     }
   
-  printf("\n");
+  printf("\n{ ");
+
+   for(cont=0;cont<15;cont++)
+   {
+      printf(" %i ",a[cont]);
+   }
+
+  printf(" }\n\n");
   system("pause");
+  
   FreeLibrary((HMODULE)hLib);
   free(a);
+
   return 0;
 }

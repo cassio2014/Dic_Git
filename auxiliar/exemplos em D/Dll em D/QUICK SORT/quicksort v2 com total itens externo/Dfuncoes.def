@@ -1,4 +1,4 @@
-LIBRARY        "quicksort.dll"
+LIBRARY        "funcoes.dll"
 DESCRIPTION    "Minha DLL escrita em D"
 SUBSYSTEM       WINDOWS
 EXETYPE	        NT

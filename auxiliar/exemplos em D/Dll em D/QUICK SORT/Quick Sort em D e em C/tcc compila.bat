@@ -1,5 +1,10 @@
 @echo off
-path=c:\tcc;%path%
-tcc -m32 quicktcc.c resource.o
+
+rem ********************
+@tccres -O coff tcc.rc -o tcc.o
+@tcc -w -m32 quicktcc.c  tcc.o
+rem ********************
+
+
 
 

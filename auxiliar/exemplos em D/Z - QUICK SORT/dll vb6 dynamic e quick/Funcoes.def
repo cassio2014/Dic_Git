@@ -1,5 +1,0 @@
-LIBRARY Funcoes
-EXPORTS
-    QuickSort
-    TOTAL_INTERACAO
-    TOTAL_TROCAS

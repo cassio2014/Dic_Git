@@ -52,8 +52,9 @@ int main()
 		printf(" %i",a[cont]);
 		}
   printf("\n\n ");
+   system("pause");
+	
   free(a);			
-  system("pause");
   return 0;
 
 }

@@ -5,4 +5,5 @@ dmd -O -release -d rand.d resource.res
 dmd -O -release -d sort2.d resource.res
 dmd -O -release -d QUICK.d resource.res
 dmd -O -release -d Quick_D.d resource.res
+pause
 del *.obj *.pdb

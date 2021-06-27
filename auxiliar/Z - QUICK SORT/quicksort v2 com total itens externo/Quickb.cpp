@@ -126,8 +126,10 @@ int main(){
    }
 
   printf(" }\n\n");
-  FreeLibrary((HMODULE)hLib);
-  free(a);
   system("pause");
+  
+ // FreeLibrary((HMODULE)hLib);
+ // free(a);
+
   return 0;
 }

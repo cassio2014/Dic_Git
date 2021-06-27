@@ -1,3 +1,4 @@
 @echo off
-dmd -O test.d funcoes.res
+dmd -O testar.d funcoes.res
 del *.obj
+rem pause
