@@ -1,6 +1,6 @@
 @echo off
 rc dic.rc
-dmd -m64 -O -release EX_dicconv.d dic.res .\lib64\dic.lib
+dmd -m32 -O -release EX_dicconv.d dic.res .\lib32\dic.lib
 pause
 cls
 EX_dicconv
