@@ -7,5 +7,5 @@ dmd forca.d forca.res
  
 @del *.res
 @del *.obj
-pause
+ 
 exit
