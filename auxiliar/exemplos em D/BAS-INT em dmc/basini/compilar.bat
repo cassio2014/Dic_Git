@@ -1,6 +1,6 @@
 @echo off
 rc basic-in.rc
-path=%bcc32%;%path%
+path=C:\Borland\BCC55\Bin;%path%
 bcc32 -w- bas-int.c
 del *.tds *.obj
 cls
