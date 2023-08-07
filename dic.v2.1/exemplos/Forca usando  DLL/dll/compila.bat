@@ -1,8 +1,6 @@
 @echo off
-dmd -shared -ofauxiliares.dll -L=/implib: dll.d auxiliares.d
-
-pause
-
+dmd -ofauxiliares.dll -L/IMPLIB dll.d auxiliares.d auxiliares.def
+del *.obj
 move /y auxiliares.dll ../
 move /y auxiliares.lib ../
 cd ..

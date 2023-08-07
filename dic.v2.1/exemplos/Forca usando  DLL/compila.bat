@@ -4,9 +4,7 @@ cls
 cd dll
 @call compila.bat
 dmd forca.d forca.res
- pause
-
+#pause
 @del *.res
 @del *.obj
- 
 exit

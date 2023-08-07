@@ -33,7 +33,7 @@ void Janela(LPCSTR Nome="Janela",
    HWND wh = GetConsoleWindow();
    
    // Movea janela para a requerida posição.
-  // MoveWindow(wh, pos_x, pos_y, larg, altu, TRUE);
+   MoveWindow(wh, pos_x, pos_y, larg, altu, TRUE);
    
    SetConsoleTitleA(Nome);
 }

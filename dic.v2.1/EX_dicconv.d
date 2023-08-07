@@ -37,14 +37,14 @@ alias tecla = kbhit;
 int main()
 {
 
-    dwrite("\n\n\tteste de conversão\n\n");
+	dwrite("\n\n\tteste de conversão\n\n");
     string a = "\tA palavra é região." ;
     writeln("    antes de converter:\n");
     writeln(a);
-    string b = dicconv(a);
-    writeln("\n  depois de converter:\n");
-    writeln(b);
-    dwriteln("\n\t** <tecle algo para sair...> **\n");
-    while(!tecla){stdout.flush();}
-    return 0;
+	string b = dicconv(a);
+	writeln("\n  depois de converter:\n");
+	writeln(b);
+	dwriteln("\n\t** <tecle algo para sair...> **\n");
+	while(!tecla){stdout.flush();}
+	return 0;
 }

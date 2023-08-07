@@ -33,21 +33,21 @@ pragma(lib,"dic");
 void main()
 {
     writeln();
-    setlocale(LC_NUMERIC, ""); // isso muda o ponto decimal para virgula
+	setlocale(LC_NUMERIC, ""); // isso muda o ponto decimal para virgula
     int Valor1 = 123;
     dwritefln("você tem R$%6.2f Reais.", 15.16734);
     writeln();
-    dwritefln("Alinhamento a direita  :│%10d│", Valor1);
-    dwritefln("Alinhamento a esquerda :│%-10d│", Valor1);
+	dwritefln("Alinhamento a direita  :│%10d│", Valor1);
+	dwritefln("Alinhamento a esquerda :│%-10d│", Valor1);
 
     writeln();
     int valor3 = 120;
 
-    dwritefln("Binario     ║ %b", valor3);
-    dwritefln("Octal       ║ %o", valor3);
-    dwritefln("Hexadecimal ║ %x", valor3);
-    dwritefln("Decimal     ║ %d\n\n", valor3);
-    dwritefln(" ║ %1$d ║ %1$x ║ %1$o ║ %1$b ║\n",valor3);
-    wait(spawnShell("pause"));
+    writefln("Binario     : %b", valor3);
+    writefln("Octal       : %o", valor3);
+    writefln("Hexadecimal : %x", valor3);
+    writefln("Decimal     : %d\n\n", valor3);
+	dwritefln(" ║ %1$d ║ %1$x ║ %1$o ║ %1$b ║\n",valor3);
+	wait(spawnShell("pause"));
 
-}
+} 
