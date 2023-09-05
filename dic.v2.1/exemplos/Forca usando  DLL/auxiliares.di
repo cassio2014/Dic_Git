@@ -9,7 +9,7 @@ enum
     /** Azul     = 4 */ Azul        = 4,
     /** Lilas    = 5 */ Lilas       = 5,
     /** Cyan     = 6 */ Cyan        = 6,
-    /** Branca   = 7 */ Branca  = 7,
+    /** Branca   = 7 */ Branca      = 7,
 }
 
 extern(C){
