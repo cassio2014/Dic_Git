@@ -48,7 +48,7 @@ int main(string[] args)
 		dicionario("pao","com mortandela.")
 	];
 
-	int numeroDePalavras = Portugues.length;
+	int numeroDePalavras = cast(int)Portugues.length;
 
 	int ResultadoPesquisa;
 

@@ -51,8 +51,9 @@ void dwritefln(string, A...)(in string fmt, A args)
 }
 */
 int main(){
-	// setlocale(LC_NUMERIC, "");
-	setlocale(LC_ALL, "");
+    
+	setlocale(LC_NUMERIC, "");
+	// setlocale(LC_ALL, "");
 
 	int value = 120;
 	writeln("\n");
