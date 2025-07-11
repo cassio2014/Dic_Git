@@ -75,7 +75,7 @@ int main()
     dwriteln("   \\xc2\\xa5  = \xc2\xa5\n   \\u00a5    = \u00a5\n   alt + 190 = ¥\n");
     
     dwriteln("não use:\n   exemplo: \\211 = ","\"\211\""," da erro na conversão da string.\n");
-    dwriteln("DÁ ERRO NA CONVERSÃO SE USAR \\211 = \211 ");
+    dwriteln("Da  ERRO NA CONVERSÃO SE USAR \\211 = \211 ");
     dwriteln("SEM ERRO NA CONVERSÃO USE \\u00eb = \u00eb\n");
     
     write("\t** <tecle algo para sair...> **");
