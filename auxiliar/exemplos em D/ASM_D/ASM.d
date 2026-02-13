@@ -51,7 +51,7 @@ void main()
  int AGE ;
  asm{
 
-	mov EAX, 2020 ;
+	mov EAX, 2026 ;
 	push EAX ;
 	mov EAX, 1965 ;
 	pop EBX ;
@@ -60,7 +60,7 @@ void main()
 	mov [AGE], EAX ;
 
  }
-    writeln("\n\t\tage = ",AGE);	
+    writeln("\n\t\tIdade = ",AGE);	
 	wait(spawnShell("pause"));
 	
 	
