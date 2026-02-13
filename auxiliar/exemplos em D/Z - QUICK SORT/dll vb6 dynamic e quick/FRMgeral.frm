@@ -4,19 +4,19 @@ Begin VB.Form FRMgeral
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Clasifica"
    ClientHeight    =   5340
-   ClientLeft      =   -12
-   ClientTop       =   -12
-   ClientWidth     =   8736
+   ClientLeft      =   -15
+   ClientTop       =   -15
+   ClientWidth     =   8745
    Icon            =   "FRMgeral.frx":0000
    MaxButton       =   0   'False
    ScaleHeight     =   5340
-   ScaleWidth      =   8736
+   ScaleWidth      =   8745
    StartUpPosition =   2  'CenterScreen
    Begin VB.CommandButton CMDsair 
       Caption         =   "&Sair"
       BeginProperty Font 
          Name            =   "Comic Sans MS"
-         Size            =   20.4
+         Size            =   20.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -33,7 +33,7 @@ Begin VB.Form FRMgeral
       Caption         =   "Clasificar"
       BeginProperty Font 
          Name            =   "DejaVu Sans Mono"
-         Size            =   19.8
+         Size            =   19.5
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -50,7 +50,7 @@ Begin VB.Form FRMgeral
    Begin VB.TextBox TXTclasifica 
       BeginProperty Font 
          Name            =   "Arial"
-         Size            =   14.4
+         Size            =   14.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -73,9 +73,14 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
-Private Declare Sub QuickSort Lib "funcoes.dll" (Matrix() As Long)
-Private Declare Function TOTAL_TROCAS Lib "funcoes.dll" () As Long
-Private Declare Function TOTAL_INTERACAO Lib "funcoes.dll" () As Long
+Private Declare Sub QuickSort _
+ Lib "funcoes.dll" (Matrix() As Long)
+ 
+Private Declare Function TOTAL_TROCAS _
+ Lib "funcoes.dll" () As Long
+ 
+Private Declare Function TOTAL_INTERACAO _
+ Lib "funcoes.dll" () As Long
 
 Dim x, NUmeros As Long
 Dim Tinicial, Tfinal, Tdife
@@ -90,7 +95,8 @@ Private Sub Form_Load()
         NUmeros = 100000
   End If
   '****************************
- FRMgeral.Caption = "Clasifica " & Format(NUmeros, "##,###,###,###")
+ FRMgeral.Caption = "Clasifica " & _
+  Format(NUmeros, "##,###,###,###")
  ReDim Tabela(NUmeros)
 End Sub
 
@@ -101,7 +107,9 @@ Private Sub CMDgerar_Click()
     DoEvents
     Tinicial = Time
     Randomize
-    TXTclasifica.Text = "Gerando " & Format(NUmeros, "##,###,###,###") & " Numeros..." & vbNewLine
+    TXTclasifica.Text = "Gerando " & _
+    Format(NUmeros, "##,###,###,###") & _
+    " Numeros..." & vbNewLine
 '**********************************************************************
   For x = 0 To UBound(Tabela)
       Tabela(x) = Int(Rnd * NUmeros + 1)
@@ -110,26 +118,35 @@ Private Sub CMDgerar_Click()
      Tfinal = Time
      Tdife = Tfinal - Tinicial
 '**********************************************************************
-    TXTclasifica.Text = TXTclasifica.Text & "Numeros Gerados em " _
-     & Format(Tdife, " h:m:s") & " seg." & vbNewLine & vbNewLine
+    TXTclasifica.Text = TXTclasifica.Text & _
+      "Numeros Gerados em " _
+      & Format(Tdife, " h:m:s") & " seg." & _
+      vbNewLine & vbNewLine
 '**********************************************************************
     Tinicial = Time
-    TXTclasifica.Text = TXTclasifica.Text & "Clasifica a Tabela..." & vbNewLine & _
-    " Hora inicial   : " & Format(Tinicial, "h:mm:ss") & vbNewLine
+    TXTclasifica.Text = TXTclasifica.Text & _
+     "Clasifica a Tabela..." & vbNewLine & _
+     " Hora inicial   : " & _
+     Format(Tinicial, "h:mm:ss") & vbNewLine
     DoEvents
     On Error Resume Next
 '******************************
-  Call QuickSort(Tabela)
+    Call QuickSort(Tabela)
 '******************************
   Tfinal = Time
   Tdife = Tfinal - Tinicial
   On Error Resume Next
    TXTclasifica.Text = TXTclasifica.Text & _
-         " Hora final      : " & Format(Tfinal, "h:mm:ss") & vbNewLine & _
+         " Hora final      : " & _
+         Format(Tfinal, "h:mm:ss") & vbNewLine & _
          "Clasificada em  " & _
-         Format(Tdife, "h:mm:ss") & " Seg. " & vbNewLine & vbNewLine & _
-          "Interação = " & Format(TOTAL_INTERACAO, "##,###,###,###") & vbNewLine & _
-            "Trocas     = " & Format(TOTAL_TROCAS, "##,###,###,###") & vbNewLine & vbNewLine
+         Format(Tdife, "h:mm:ss") & " Seg. " & _
+         vbNewLine & vbNewLine & _
+         "Interação = " & _
+         Format(TOTAL_INTERACAO, "##,###,###,###") & _
+         vbNewLine & "Trocas     = " & _
+         Format(TOTAL_TROCAS, "##,###,###,###") & _
+         vbNewLine & vbNewLine
             
    TXTclasifica.Text = _
          TXTclasifica.Text & "{ "
