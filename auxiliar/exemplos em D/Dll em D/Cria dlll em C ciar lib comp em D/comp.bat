@@ -1,12 +1,16 @@
 @echo off
 cls
 rc imprimir.rc
-path=%bcc32%;%path%
+path=%bcc32%
 bcc32 -w- -tWD imprimir.cpp
-"C:\Program Files (x86)\Microsoft Visual Studio\VC98\Bin\link" /dump /exports imprimir.dll /out:imprimir.txt
 dll2def imprimir.dll > imprimir.def
-"C:\Program Files (x86)\Microsoft Visual Studio\VC98\Bin\lib" /def:imprimir.def /out:libimprimir.lib /machine:x86
+
+lib /def:imprimir.def /out:libimprimir.lib /machine:x86
+
+pause
 coffimplib libimprimir.lib imprimir.lib
+pause
+
 dmd -O -release lerdll.d imprimir.res imprimir.lib
 del *.obj
 exit

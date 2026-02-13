@@ -30,7 +30,7 @@ int main(){
    {
        printf("C(%i) = %f \n\r",n, C[n]);
    }
-   system("pause");
+  // system("pause");
    
    FreeLibrary((HMODULE)hLib);
    system("pause");

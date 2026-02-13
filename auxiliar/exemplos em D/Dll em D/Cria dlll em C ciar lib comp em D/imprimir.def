@@ -1,5 +1,5 @@
 LIBRARY   "imprimir.dll"
 
 EXPORTS
-	_imprima
 	___CPPdebugHook
+	_imprima

@@ -1,2 +1,2 @@
-del *.exe *.exp *.lib *.obj *.txt *.def *.dll   *.aps *.o
+del *.exe *.exp  *.obj *.txt *.def *.dll   *.aps *.o
 
